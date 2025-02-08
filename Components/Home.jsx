@@ -1,5 +1,11 @@
 import React from 'react'
 import logo from './images/BIG_LOGO.png'
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import cloud from "./images/Cloud.png"
+
+
+gsap.registerPlugin(useGSAP);
 
 
 const Home = () => {
@@ -18,8 +24,8 @@ const Home = () => {
         </div>
     
     
-        <div>
-        <img  src={logo} className='h-[32vw]' />
+        <div className='relative'>
+        <img  src={logo} className='h-[32vw] z-2' />
         </div>
         </div>
   )
