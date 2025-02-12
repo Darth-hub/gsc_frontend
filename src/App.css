@@ -93,3 +93,15 @@ h1{
 .slick-list{
   padding-top: 5px;
 }
+
+
+/* Campaign */
+
+.Blog{
+  background: linear-gradient(to top, rgba(27, 35, 22, 1), rgba(0, 0, 0, 0));
+}
+
+.Campaign{
+  background-color: #222C1D;
+  background: linear-gradient(to top, rgba(27, 35, 22, 1), rgba(27, 35, 22, 1));
+}

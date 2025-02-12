@@ -1,0 +1,21 @@
+/* Capign Cards*/
+
+.campaignCard {
+    box-sizing: border-box;
+    background: rgba(39, 46, 34, 1);
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+  }
+  
+  .campaignCard:hover {
+    border: 1px solid black;
+    transform: scale(1.1);
+  }
+  
+  

@@ -1,18 +1,25 @@
 import React from 'react'
 import './App.css'
 import Home from '../Components/Home'
-import Blogs from '../Components/Blogs'
+import Blogs from './Pages/Blogs'
+import Campaign from './Pages/Campaign'
+import Line from '../Components/Line'
+import Customer_Review from './Pages/Customer_Review'
+import How_We_Work from './Pages/How_We_Work'
+import Footer from '../Components/Footer'
+
 
 
 const App = () => {
   return (
     <>
     <Home />
-    <div className='w-full flex justify-center'>
-    <div className='w-[90%] my-23 h-[1px] bg-white'>
-    </div>
-    </div>
+    <Line />
     <Blogs />
+    <Campaign />
+    <Customer_Review />
+    <How_We_Work />
+    <Footer />
     </>
   )
 }

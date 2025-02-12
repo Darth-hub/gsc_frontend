@@ -1,5 +1,5 @@
 import React from 'react'
-import Cards from './Cards'
+import Cards from '../../Components/Cards'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -16,7 +16,7 @@ const Blogs = () => {
       };
 
   return (
-    <div class="w-full h-[100vh]">
+    <div class="Blog w-full h-[100vh]">
         <div className='text-center text-5xl pt-8'>
             <h1>BLOGS</h1>
         </div>
