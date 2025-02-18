@@ -7,12 +7,14 @@ import Line from '../Components/Line'
 import Customer_Review from './Pages/Customer_Review'
 import How_We_Work from './Pages/How_We_Work'
 import Footer from '../Components/Footer'
+import User_profile from './Pages/User/User_profile'
 
 
 
 const App = () => {
   return (
     <>
+    {/* <User_profile/> */}
     <Home />
     <Line />
     <Blogs />

@@ -3,16 +3,16 @@ import logo from './images/BIG_LOGO.png'
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import cloud from "./images/Cloud.png"
-
+import Header from './Header';
 
 gsap.registerPlugin(useGSAP);
 
 
 const Home = () => {
   return (
+    <>
+    <Header />
     <div className='flex gap-35 mt-8'>
-        
-    
         <div className=' flex flex-col  w-[35vw] ml-40 mt-14'>
           <div>
           <h1 className='text-[7em]' id='company'>ECLYRA</h1>
@@ -28,6 +28,7 @@ const Home = () => {
         <img  src={logo} className='h-[32vw] z-2' />
         </div>
         </div>
+    </>
   )
 }
 
