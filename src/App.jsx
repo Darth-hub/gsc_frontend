@@ -11,17 +11,19 @@ import User_profile from './Pages/User/User_profile'
 
 
 
+
 const App = () => {
   return (
     <>
+
     {/* <User_profile/> */}
-    <Home />
+    {/* <Home />
     <Line />
     <Blogs />
     <Campaign />
     <Customer_Review />
     <How_We_Work />
-    <Footer />
+    <Footer /> */}
     </>
   )
 }
