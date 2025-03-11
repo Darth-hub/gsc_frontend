@@ -5,13 +5,15 @@ import { useGSAP } from "@gsap/react";
 import cloud from "./images/Cloud.png"
 import Header from './Header';
 
-gsap.registerPlugin(useGSAP);
 
 
 const Home = () => {
   return (
     <>
-    <Header />
+    <div className='flex items-center justify-between '>
+      <Header />
+      <button class="button px-3 py-1 mr-27 rounded-lg mt-6"><p class="text">login/sign up</p></button>
+    </div>
     <div className='flex gap-35 mt-8'>
         <div className=' flex flex-col  w-[35vw] ml-40 mt-14'>
           <div>
@@ -20,7 +22,7 @@ const Home = () => {
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, ut est assumenda quibusdam, error facilis eos optio maiores architecto incidunt adipisci sapiente labore earum amet, soluta repellat ratione laborum placeat!
           </p>
           </div>
-          <button class='button mt-15 py-3 self-end mr-5 w-[60%]'><p class="text">Get Started</p></button>
+          <button class='button rounded-xl mt-15 py-3 self-end mr-5 w-[60%]'><p class="text">Get Started</p></button>
         </div>
     
     

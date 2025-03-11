@@ -4,8 +4,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import Header from '../../../Components/Header';
 
-
-const User_dashboard = () => {
+const Buy_scarp = () => {
   return (
     <>
     <Header />
@@ -15,8 +14,7 @@ const User_dashboard = () => {
           <h1 className='text-[3.5em]' id='company'>Sell your scrap here online <br /> with <span className='compName text-[#428700]'>ECLYRA</span></h1>
           
           </div>
-          <button class='button rounded-2xl mt-15 py-3  mr-5 w-[60%]'><p class="text"><span className='font-medium'>Schedule Your Pickup</span></p></button>
-          <button class='button rounded-2xl mt-5 py-3  mr-5 w-[60%]'><p class="text font-medium">View Pickups</p></button>
+          <button class='button rounded-xl mt-15 py-3  mr-5 w-[35%]'><p class="text"><span className='font-medium'>Buy Scrap</span></p></button>
         </div>
     
     
@@ -28,4 +26,4 @@ const User_dashboard = () => {
   )
 }
 
-export default User_dashboard
+export default Buy_scarp

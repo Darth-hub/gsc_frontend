@@ -8,6 +8,14 @@ h1{
     font-family: "Anton", serif;
   font-optical-sizing: auto;
   font-style: normal;
+  letter-spacing: 2px;
+  }
+
+  .compName{
+    font-family: "Anton", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  letter-spacing: 2px;
   }
 
  
@@ -21,7 +29,7 @@ h1{
     background-color: #222C1D;
     outline: 3px #222C1D solid;
     outline-offset: -3px;
-    border-radius: 5px;
+    
     border: none;
     cursor: pointer;
     transition: 400ms;
