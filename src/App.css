@@ -28,7 +28,7 @@ h1{
   }
   
   .button .text {
-    color:white;
+    color:rgb(255, 254, 254);
     font-size: 1em;
     transition: 400ms;
   }
@@ -85,7 +85,7 @@ h1{
 
 .card:hover {
   border-radius: 12px;
-  background-color: #37ca12;
+  background-color: #49bc2d;
   scale:0.98;
   box-shadow: 0px 3px 1.5px 0.5px rgba(161, 223, 154, 0.4);
 }

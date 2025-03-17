@@ -8,7 +8,7 @@ const Customer_Review = () => {
         <div className='flex justify-center'><hr className='w-[90vw]'></hr></div>
 
         <div>
-            <h1 className='text-5xl'>CUSTOMER REVIEW</h1>
+            <h1 className='text-5xl'>TESTINOMIALS</h1>
         </div>
 
         <div className=' px-10 w-full h-full flex justify-center gap-5 flex-wrap'>

@@ -1,0 +1,171 @@
+/* scrapPage*/
+
+
+
+
+.category.card {
+    width: 90%; /* Increase card width */
+    padding: 25px; /* More internal spacing */
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 20px auto; /* Centering the category */
+    border: 2px solid white;
+  }
+  
+  
+  .category-title {
+    font-size: 1.3rem; /* Make headings more prominent */
+    text-align: left;
+    margin-bottom: 15px;
+  }
+  /* Horizontal Item Layout */
+  .item {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Increased spacing between icon, name, and price */
+    background: rgba(0, 0, 0, 0.6);
+    padding: 12px 20px; /* More padding for better spacing */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 180px; /* Increased width to avoid cramping */
+  }
+  
+  .item:hover {
+    transform: scale(1.01);
+    background: #357bb9;
+    color: #181717;
+  }
+  
+  
+  
+  .item-name {
+    font-size: 1.1rem; /* Slightly bigger font */
+    font-weight: bold;
+  }
+  
+  .item-price {
+    font-size: 1rem;
+    color: #98e6c7;
+  }
+  .scrap-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .scrap-card {
+    background-color: rgba(4, 42, 4, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .page-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #aed7f4;
+  }
+  
+  .page-title2{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #dde0e2;
+  }
+
+
+  
+  .scrap-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .scrap-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .scrap-image {
+    width: 50px;
+    height: auto;
+  }
+  
+  .items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .items-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+  }
+  
+  .header-container {
+    text-align: center; /* Centers both title and subtitle */
+  }
+  
+  .scrap-header {
+    font-size: 32px; /* Increase font size */
+    font-weight: bold;
+    color: white; /* Ensure visibility */
+  }
+  
+  .price-disclaimer {
+    font-size: 18px;
+    color: #ccc;
+  }
+  .header-container {
+    text-align: center; /* Centers both title and subtitle */
+  }
+
+  
+  .item {
+    flex: 1;
+    min-width: 20%;
+    text-align: center;
+    background-color: #222C1D;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+    border: 2px solid white; /* Applied white border to each item */
+  }
+  
+  
+  .header-container {
+    text-align: center; /* Centers both title and subtitle */
+  }
+  
+  .scrap-header {
+    font-size: 32px; /* Increase font size */
+    font-weight: bold;
+    color: rgb(249, 246, 246); /* Ensure visibility */
+  }
+  
+  .price-disclaimer {
+    font-size: 18px;
+    color: #ccc;
+  }
+  
+  
+  /* Responsive Grid for Smaller Screens */
+  @media (max-width: 768px) {
+    .items {
+      flex-direction: column;
+      align-items: center;
+      gap: 25px; /* More spacing for mobile */
+    }
+  
+    .item {
+      width: 100%;
+      justify-content: space-between;
+      padding: 15px; /* More padding on mobile */
+    }
+  }
+  

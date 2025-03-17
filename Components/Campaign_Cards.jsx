@@ -9,11 +9,13 @@ const Campaign_Cards = () => {
         </div>
 
         <div>
-            <h1 className='text-xl'>Swachh Bharat</h1>
+            <h1 className='text-xl'>Waste to Worth</h1>
         </div>
 
         <div>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit vel, ad quasi ipsam ut dolorum tempora libero recusandae consequuntur, quas nihil. Non fugiat corporis ex dolor nulla, facilis consequatur tempora!</p>
+            <p>"Recycle Today for a Greener Tomorrow!"
+
+E-waste is growing at an alarming rate. Every device you recycle helps reduce pollution and conserve valuable resources. Together, we can build a cleaner, greener future! 🌱💚 #RecycleForTomorrow #SustainableLiving"</p>
         </div>
     </div>
   )
