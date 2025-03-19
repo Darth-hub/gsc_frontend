@@ -1,0 +1,18 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.icon {
+    margin-right: 16px; /* Assuming mantine-spacing-md is 16px */
+    background-color: transparent;
+}
+
+.title {
+    color: #D0E1FF; /* Light blue shade similar to mantine-color-blue-0 */
+}
+
+.description {
+    color: white;
+}

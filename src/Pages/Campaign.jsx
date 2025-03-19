@@ -10,7 +10,7 @@ const Campaign = () => {
 
 
   return (
-    <div  class='Campaign bg-[#1B2316] flex flex-col items-center w-full h-screen'>
+    <div  class='Campaign bg-[#1B2316] flex flex-col items-center w-full h-screen text-white'>
         <div className='flex justify-center'><hr className='w-[90vw]'></hr></div>
 
         <div className='mt-10  text-5xl'><h1>OUR TOP CAMPAIGN</h1></div>

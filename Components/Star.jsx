@@ -2,7 +2,7 @@ import React from 'react'
 
 const Star = () => {
   return (
-    <div className='hover:scale-[2] hover:duration-250'>
+    <div className='hover:scale-[2] hover:duration-250 '>
       <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-4 w-4 text-yellow-400"

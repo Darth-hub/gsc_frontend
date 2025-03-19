@@ -1,0 +1,65 @@
+.wrapper {
+    min-height: 400px;
+    background-image: linear-gradient(
+      -60deg,
+      #4c9ee3 0%,  /* Mantine Blue-4 */
+      #1c7ed6 100%  /* Mantine Blue-7 */
+    );
+    border-radius: 8px; /* Approx for Mantine-radius-md */
+    padding: calc(32px * 2.5); /* Mantine-spacing-xl = 32px */
+}
+
+@media (max-width: 768px) { /* Converted $mantine-breakpoint-sm to 768px */
+    .wrapper {
+        padding: calc(32px * 1.5);
+    }
+
+    .description {
+        max-width: 100%;
+    }
+}
+
+.title {
+    font-family: "Greycliff CF", sans-serif; /* Mantine-font-family */
+    color: white;
+    line-height: 1;
+}
+
+.description {
+    color: #d0ebff; /* Mantine Blue-0 */
+    max-width: 300px;
+}
+
+.form {
+    background-color: white;
+    padding: 32px; /* Mantine-spacing-xl */
+    border-radius: 8px; /* Mantine-radius-md */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15); /* Approx for Mantine-shadow-lg */
+    padding-right: 10%;
+}
+
+.social {
+    color: white;
+}
+
+.social:hover {
+    color: #a5d8ff; /* Mantine Blue-1 */
+}
+
+.input {
+    background-color: white;
+    border: 1px solid #ced4da; /* Mantine Gray-4 */
+    color: rgb(9, 9, 9);
+}
+
+.input::placeholder {
+    color: #adb5bd; /* Mantine Gray-5 */
+}
+
+.inputLabel {
+    color: rgba(172, 18, 18, 0.114);
+}
+
+.control {
+    background-color: #1971c2; /* Mantine Blue-6 */
+}

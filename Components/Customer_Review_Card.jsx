@@ -7,7 +7,7 @@ const Customer_Review_Card = () => {
     <div class="flex flex-col gap-2 h-[35%]  max-w-[40%] w-full bg-[#272E22]  p-5 rounded-md  shadow-md hover:scale-105 hover:duration-150 duration-150">
   <div class="flex flex-row justify-between w-full">
     <div class="flex flex-row justify-between w-full">
-      <p class="text-xs">Ayush Kumar</p>
+      <p class="text-xs">Ayush Ranjan</p>
       <p class="text-xs">Febrauary 10, 2025</p>
     </div>
   </div>
@@ -27,8 +27,9 @@ const Customer_Review_Card = () => {
   </div>
 
   <div class="text-sm">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia
-    odio vitae vestibulum. Donec in efficitur ipsum, sed dapibus eros.
+  The Scrapman was highly skilled, ensuring precise weighing of goods without any errors.  
+Eclyra is making my life so much easier!  
+The overall website experience was truly fantastic!
   </div>
     </div>
 
