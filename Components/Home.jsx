@@ -1,5 +1,7 @@
 import React from 'react'
 import logo from './images/BIG_LOGO.png'
+import earth from './images/earth.png'
+import ring from './images/ring.png'
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import cloud from "./images/Cloud.png"
@@ -28,8 +30,8 @@ const Home = () => {
         </div>
     
     
-        <div className='relative'>
-        <img  src={logo} className='h-[32vw] z-2' />
+        <div className='relative flex justify-center items-center  aspect-square'>
+        <img  src={logo} className='h-[75vh]' />
         </div>
         </div>
     </>
