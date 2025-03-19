@@ -11,9 +11,9 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <>
-    <div className='flex items-center justify-between '>
+    <div className='flex items-center justify-around '>
       <Header />
-      <button class="button px-3 py-1 mr-27 rounded-lg mt-6"><p class="text">login/sign up</p></button>
+      <button class="button px-3 py-1 rounded-lg mt-6"><p class="text">login/sign up</p></button>
     </div>
     <div className='flex gap-35 mt-8 text-white'>
         <div className=' flex flex-col  w-[35vw] ml-40 mt-14'>

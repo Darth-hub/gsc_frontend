@@ -12,7 +12,6 @@ import Join_community from './Pages/User/Join_community.jsx';
 import User_dashboard from './Pages/User/User_dashboard.jsx';
 import { Contact } from 'lucide-react';
 
-
 function App() {
   return (
     <>
@@ -22,8 +21,6 @@ function App() {
       <Route path='/' element={<Landing_Page />} />
     </Routes>
     
-    
-    
 
     <Routes>
       <Route path='/community' element={<Community />} />
@@ -31,6 +28,7 @@ function App() {
       <Route path='/User' element={<User_dashboard />} />
       <Route path='/scrap_rate' element={<ScrapRate />} />
       <Route path='/contact' element={<ContactUs />} />
+      <Route path='/store' element={<StorePage />} />
     </Routes>
 
 

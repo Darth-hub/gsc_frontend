@@ -12,7 +12,7 @@ const Header = () => {
             <img src={logo} className='h-[3rem]' />
             <h1 className='text-3xl'>ECLYRA</h1>
         </div>
-        <div className='ml-30  flex gap-30 text-semibold'>
+        <div className='ml-30  text-[0.9em] flex gap-30 text-semibold'>
             <Link smooth to="/">HOME</Link>
             <Link smooth to="/scrap_rate">SCRAP RATE</Link>
             <Link smooth to="/#about">ABOUT US</Link>

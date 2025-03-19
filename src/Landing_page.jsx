@@ -15,6 +15,8 @@ import User_dashboard from './Pages/User/User_dashboard'
 import Buy_scarp from './Pages/User/Buy_scarp'
 import Community from './Pages/Community'
 import Join_community from './Pages/User/Join_community'
+import Store from './Pages/StorePage.jsx';
+import BlogPage from './Pages/BlogsPage.jsx';
 
 const Landing_Page = () => {
   return (
