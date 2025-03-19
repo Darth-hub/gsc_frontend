@@ -4,6 +4,8 @@ import './App.css'
 import Home from '../Components/Home'
 import Blogs from './Pages/Blogs'
 import Campaign from './Pages/Campaign'
+import HeroBanner from '../Components/HeroBanner';
+import OurPresence from './Pages/OurPresence.jsx';
 import Line from '../Components/Line'
 import Customer_Review from './Pages/Customer_Review'
 import How_We_Work from './Pages/How_We_Work'
@@ -20,6 +22,8 @@ const Landing_Page = () => {
     <Home />
     <Line />
     <Blogs />
+    <HeroBanner />
+    <OurPresence />
     <Campaign />
     <Customer_Review />
     <How_We_Work />

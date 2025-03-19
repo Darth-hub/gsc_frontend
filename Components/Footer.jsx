@@ -9,7 +9,7 @@ import Subscribe from './Subscribe'
 
 const Footer = () => {
   return (
-    <div id="contact" className='w-full flex justify-between  h-[45vh] bg-[#222C1D]'>
+    <div id="contact" className='w-full text-white flex justify-between  h-[45vh] bg-[#222C1D]'>
 
         <div className=' w-[40%] flex flex-col relative top-[-25px] justify-center items-center h-full'>
             <div className='w-[70%] h-[20%] flex gap-2 '>

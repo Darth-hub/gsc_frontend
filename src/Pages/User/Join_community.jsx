@@ -6,8 +6,8 @@ import { HashLink as Link } from "react-router-hash-link";
 const Join_community = () => {
   return (
     <>
-    <div className=''>
-    <div className='p-8 text-5xl flex gap-4'>
+    <div className='text-white'>
+    <div className='p-8 text-5xl  flex gap-4'>
     <Link smooth to="/community"><i class="ri-arrow-left-line"></i></Link>
         <h1>JOIN COMMUNITY</h1>
     </div>

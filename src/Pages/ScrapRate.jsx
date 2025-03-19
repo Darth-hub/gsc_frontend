@@ -46,6 +46,7 @@ import clothes from "../../Components/images/clothes.png";
 import toys from "../../Components/images/toys.png";
 import bicycle from "../../Components/images/cycle.png";
 import Wires from "../../Components/images/wire.png";
+import Header from "../../Components/Header";
 
 const scrapCategories = [
   {
@@ -110,6 +111,9 @@ const ScrapRates = () => {
   return (
     <div className="scrap-rates-page">
       {/* Page Header */}
+      <div className="mb-5">
+      <Header />
+      </div>
       <h1 className="page-title">Scrap Rates</h1>
       <h2 className ="page-title2">* Prices may vary due to Market fluctuations</h2>
 
@@ -136,6 +140,9 @@ const ScrapRates = () => {
             </div>
           </div>
         ))}
+      </div>
+      <div>
+      <Footer />
       </div>
     </div>
   );
