@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from './images/LOGO.png'
+import eclyralogo from './images/eclyralogo.png'
 import 'remixicon/fonts/remixicon.css'
 import { HashLink as Link } from "react-router-hash-link";
 
@@ -7,9 +7,9 @@ import { HashLink as Link } from "react-router-hash-link";
 const Header = () => {
   return (
     <div className='h-20  flex items-center text-white'>
-      <nav className='flex items-end w-full pl-8 '>
+      <nav className='flex justify-center  items-end w-full pl-8 '>
         <div class="flex items-end justify-around gap-4">
-            <img src={logo} className='h-[3rem]' />
+            <img src={eclyralogo} className='h-[5rem]' />
             <h1 className='text-3xl'>ECLYRA</h1>
         </div>
         <div className='ml-30  text-[0.9em] flex gap-30 text-semibold'>
