@@ -13,45 +13,19 @@ import User_dashboard from './Pages/User/User_dashboard'
 import Buy_scarp from './Pages/User/Buy_scarp'
 import Community from './Pages/Community'
 import Join_community from './Pages/User/Join_community'
-import Landing_Page from './Landing_page';
-import View_pickups from './Pages/User/View_pickups';
-import Loader from '../Components/Loader';
 
-
-
-
-const App = () => {
+const Landing_Page = () => {
   return (
     <>
-
-    
-
-
-
-
-    
-    
-    {/* <Buy_scarp /> */}
-    {/* <User_profile /> */}
-    <Loader />
-    
-    <Routes>
-      <Route path='/' element={<Landing_Page />} />
-    </Routes>
-    
-    
-    
-
-    <Routes>
-      <Route path='/community' element={<Community />} />
-      <Route path='/Join_community' element={<Join_community />} />
-      <Route path='/User' element={<User_dashboard />} />
-    </Routes>
-
-
-    
+    <Home />
+    <Line />
+    <Blogs />
+    <Campaign />
+    <Customer_Review />
+    <How_We_Work />
+    <Footer />
     </>
   )
 }
 
-export default App
+export default Landing_Page

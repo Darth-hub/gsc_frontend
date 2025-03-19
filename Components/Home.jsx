@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import cloud from "./images/Cloud.png"
 import Header from './Header';
+import { Link } from "react-router-dom";
 
 
 
@@ -22,7 +23,9 @@ const Home = () => {
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, ut est assumenda quibusdam, error facilis eos optio maiores architecto incidunt adipisci sapiente labore earum amet, soluta repellat ratione laborum placeat!
           </p>
           </div>
+          <Link smooth to='/User'>
           <button class='button rounded-xl mt-15 py-3 self-end mr-5 w-[60%]'><p class="text">Get Started</p></button>
+          </Link>
         </div>
     
     

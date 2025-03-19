@@ -1,4 +1,5 @@
 import React from 'react'
+import { HashLink as Link } from "react-router-hash-link";
 
 const Community_card = () => {
   return (
@@ -12,9 +13,9 @@ const Community_card = () => {
             <span>2k members</span>
         </div>
         <div>
-        <a href="#">
+        <Link smooth to="/Join_community">
         <button class='bg-[#277868] duration-150 ease-linear hover:scale-[1.1] text-amber-50 cursor-pointer absolute right-3 bottom-1 rounded w-[35%] '><p class="text"><span className='text-[0.9em] text-center'>View Details</span></p></button>
-        </a>
+        </Link>
         </div>
 
     </div>

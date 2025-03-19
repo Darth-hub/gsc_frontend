@@ -1,6 +1,8 @@
 import React from 'react'
 import logo from './images/LOGO.png'
 import 'remixicon/fonts/remixicon.css'
+import { HashLink as Link } from "react-router-hash-link";
+
 
 const Header = () => {
   return (
@@ -11,17 +13,18 @@ const Header = () => {
             <h1 className='text-3xl'>ECLYRA</h1>
         </div>
         <div className='ml-30  flex gap-30 text-semibold'>
-            <a href="">HOME</a>
+            <Link smooth to="/">HOME</Link>
             <a href="">SCRAP TYPE</a>
-            <a href="">ABOUT US</a>
-            <a href="">CONTACT US</a>
-            <a href="">JOIN COMMUNITY</a>
+            <Link smooth to="/#about">ABOUT US</Link>
+            <Link smooth to="/#contact">CONTACT US</Link>
+            <Link smooth to="/community">JOIN COMMUNITY</Link>
             
         </div>
         {/* <div>
         <i class="ri-menu-3-line text-[2rem] absolute top-5 right-10"></i>
         </div> */}
       </nav>
+
     </div>
   )
 }
