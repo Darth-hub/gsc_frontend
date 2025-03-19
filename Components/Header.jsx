@@ -15,7 +15,7 @@ const Header = () => {
         <div className='ml-30  text-[0.9em] flex gap-30 text-semibold'>
             <Link smooth to="/">HOME</Link>
             <Link smooth to="/scrap_rate">SCRAP RATE</Link>
-            <Link smooth to="/#about">ABOUT US</Link>
+            <Link smooth to="/store">STORE</Link>
             <Link smooth to="/contact">CONTACT US</Link>
             <Link smooth to="/community">JOIN COMMUNITY</Link>
             

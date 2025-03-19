@@ -1,5 +1,7 @@
 import { Heart, ShoppingCart, Minus, Plus, Maximize2 } from "lucide-react"
 import { useState } from "react"
+import Header from "../../Components/Header"
+import Footer from "../../Components/Footer"
 
 
 export default function Store() {
@@ -73,6 +75,8 @@ export default function Store() {
   }
 
   return (
+    <>
+    <Header />
     <div className="max-w-7xl mx-auto p-6">
       <h1 className="text-3xl font-bold text-left mb-8 text-white">Rewards and Prices</h1>
       
@@ -127,6 +131,8 @@ export default function Store() {
       {/* Footer Controls */}
       
     </div>
+    <Footer />
+    </>
   )
 }
 

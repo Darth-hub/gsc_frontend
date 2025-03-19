@@ -11,11 +11,13 @@ import Community from './Pages/Community.jsx';
 import Join_community from './Pages/User/Join_community.jsx';
 import User_dashboard from './Pages/User/User_dashboard.jsx';
 import { Contact } from 'lucide-react';
+import BlogPage from './Pages/BlogsPage.jsx';
+import Store from './Pages/StorePage';
 
 function App() {
   return (
     <>
-
+    
     
     <Routes>
       <Route path='/' element={<Landing_Page />} />

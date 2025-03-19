@@ -1,6 +1,8 @@
 import { Search } from "lucide-react";
 import { useState } from "react"; // Import useState for search functionality
 
+
+
 export default function BlogPage() {
   // State for search input
   const [searchQuery, setSearchQuery] = useState("");
