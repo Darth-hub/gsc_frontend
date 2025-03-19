@@ -1,94 +1,205 @@
-import React from 'react';
-import { IconBrandInstagram, IconBrandTwitter, IconBrandYoutube } from '@tabler/icons-react';
-import {
-  ActionIcon,
-  Button,
-  Group,
-  SimpleGrid,
-  Text,
-  Textarea,
-  TextInput,
-  Title,
-  Container,
-} from '@mantine/core';
-import ContactIconsList from '../ContactIconsList';
-import '../ContactUs.module.css';
+"use client";
 
-const social = [IconBrandTwitter, IconBrandYoutube, IconBrandInstagram];
+import { useState } from "react";
+import { Phone, Mail, MapPin, Twitter, Instagram, Github } from "lucide-react";
 
-function ContactUs() {
+export default function ContactForm() {
+  const [formData, setFormData] = useState({
+    firstName: "Rohit",
+    lastName: "Khallar",
+    email: "xyz@gmail.com",
+    phoneNumber: "+91 96307-39557",
+    subject: "General Inquiry",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleRadioChange = (value) => {
+    setFormData((prev) => ({ ...prev, subject: value }));
+  };+1
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+    // Add your form submission logic here
+  };
+
   return (
-    <Container size="lg" style={{ minHeight: '80vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <div className="wrapper" style={{ width: '85%' }}> {/* Increased width slightly */}
-        <SimpleGrid cols={2} spacing={50} breakpoints={[{ maxWidth: 'sm', cols: 1 }]}>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}> {/* Centered */}
-            <Title className="title" style={{ color: 'white', textAlign: 'left' }}>
-              Contact us
-              <Text className="description" mt="sm" mb={30} style={{ textAlign: 'left' }}>
-                Leave your email, and we will get back <br /> to you within 24 hours.
-              </Text>
-            </Title>
+    <div className="max-w-6xl mx-auto p-4 md:p-8">
+      <div className="text-center mb-10">
+  <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Contact Us</h1>
+  <p className="text-white text-lg">
+    Any question or remarks? Just write us a message!
+  </p>
+</div>
 
-            <ContactIconsList /> {/* Contact Details */}
 
-            {/* Social media icons aligned in the center */}
-            <Group mt="lg" spacing="xs">
-              {social.map((Icon, index) => (
-                <ActionIcon key={index} size={28} className="social" variant="transparent">
-                  <Icon size={22} stroke={1.5} />
-                </ActionIcon>
-              ))}
-            </Group>
+      <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div className="flex flex-col md:flex-row">
+          {/* Left Sidebar */}
+          <div className="bg-green-800 text-white p-8 md:w-1/3">
+            <div className="h-full flex flex-col">
+              <div>
+                <h2 className="text-2xl font-bold mb-2 ">Contact Information</h2>
+                <p className="text- mb-8">
+                  Say something to start a live chat!
+                </p>
+              </div>
+
+              <div className="space-y-6 mb-auto">
+                <div className="flex items-center">
+                  <Phone className="mr-4 h-5 w-5" />
+                  <span>+91 96307-39557</span>
+                </div>
+                <div className="flex items-center">
+                  <Mail className="mr-4 h-5 w-5" />
+                  <span>ayushranjan112400@gmail.com</span>
+                </div>
+                <div className="flex items-start">
+                  <MapPin className="mr-4 h-5 w-5 mt-1" />
+                  <span>
+                    IIIT Allahabad, Prayagraj, India
+                  </span>
+                </div>
+              </div>
+
+              <div className="mt-auto pt-8">
+                <div className="flex space-x-4">
+                  {[Twitter, Instagram, Github].map((Icon, index) => (
+                    <a
+                      key={index}
+                      href="#"
+                      className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 transition-colors"
+                    >
+                      <Icon className="h-5 w-5" />
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div
-            className="form"
-            style={{
-              width: '90%', // Slightly bigger form
-              minHeight: '500px',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              backgroundColor: 'rgba(39, 46, 34, 1)',
-              padding: '30px',
-              borderRadius: '8px',
-              margin: 'auto', // Centered the form
-            }}
-          >
-            <TextInput
-              label={<span style={{ color: 'white' }}>Email</span>}
-              placeholder="your@email.com"
-              required
-              style={{ height: '50px', marginBottom: '20px' }}
-              classNames={{ input: 'input', label: 'inputLabel' }}
-            />
+          {/* Right Form */}
+          <div className="p-8 md:w-2/3">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    First Name
+                  </label>
+                  <input
+                    type="text"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    placeholder="I"
+                    className="w-full border-b border-gray-300 py-2 focus:border-black focus:outline-none"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    Last Name
+                  </label>
+                  <input
+                    type="text"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    className="w-full border-b border-gray-300 py-2 focus:border-black focus:outline-none"
+                  />
+                </div>
+              </div>
 
-            <TextInput
-              label={<span style={{ color: 'white' }}>Name</span>}
-              placeholder="Ayush Ranjan"
-              mt="md"
-              style={{ height: '50px', marginBottom: '20px' }}
-              classNames={{ input: 'input', label: 'inputLabel' }}
-            />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full border-b border-gray-300 py-2 focus:border-black focus:outline-none"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    name="phoneNumber"
+                    value={formData.phoneNumber}
+                    onChange={handleChange}
+                    className="w-full border-b border-gray-300 py-2 focus:border-black focus:outline-none"
+                  />
+                </div>
+              </div>
 
-            <Textarea
-              required
-              label={<span style={{ color: 'white' }}>Your Message</span>}
-              placeholder="I want to order your goods"
-              minRows={6}
-              mt="md"
-              style={{ height: '120px', marginBottom: '20px' }}
-              classNames={{ input: 'input', label: 'inputLabel' }}
-            />
+              <div>
+                <p className="block text-sm font-medium text-gray-700 mb-3">
+                  Select Subject?
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  {["General Inquiry", "Feedback", "Support", "Others"].map(
+                    (option, index) => (
+                      <label key={index} className="flex items-center cursor-pointer">
+                        <input
+                          type="radio"
+                          name="subject"
+                          checked={formData.subject === option}
+                          onChange={() => handleRadioChange(option)}
+                          className="sr-only"
+                        />
+                        <span
+                          className={`w-5 h-5 rounded-full border flex items-center justify-center mr-2 ${
+                            formData.subject === option
+                              ? "bg-black border-black"
+                              : "border-gray-300"
+                          }`}
+                        >
+                          {formData.subject === option && (
+                            <span className="w-2 h-2 rounded-full bg-white"></span>
+                          )}
+                        </span>
+                        {option}
+                      </label>
+                    )
+                  )}
+                </div>
+              </div>
 
-            <Group position="right" mt="md">
-              <Button className="control">Send message</Button>
-            </Group>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Message
+                </label>
+                <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Write your message.."
+                  rows={4}
+                  className="w-full border-b border-gray-300 py-2 focus:border-black focus:outline-none resize-none"
+                ></textarea>
+              </div>
+
+              <div className="flex justify-end">
+                <button
+                  type="submit"
+                  className="bg-green-800 text-white px-6 py-3 rounded hover:bg-gray-800 transition-colors"
+                >
+                  Send Message
+                </button>
+              </div>
+            </form>
           </div>
-        </SimpleGrid>
+        </div>
       </div>
-    </Container>
+    </div>
   );
 }
-
-export default ContactUs;

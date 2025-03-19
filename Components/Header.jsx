@@ -4,7 +4,7 @@ import 'remixicon/fonts/remixicon.css'
 
 const Header = () => {
   return (
-    <div className='h-20  flex items-center'>
+    <div className='h-20  flex items-center text-white'>
       <nav className='flex items-end w-full pl-8 '>
         <div class="flex items-end justify-around gap-4">
             <img src={logo} className='h-[3rem]' />

@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from '../Components/Home';
 import Blogs from './Pages/Blogs';
 import Campaign from './Pages/Campaign';
@@ -10,21 +11,29 @@ import ScrapRate from './Pages/ScrapRate';
 import Footer from '../Components/Footer';
 import StorePage from './Pages/StorePage';
 import ContactUs from './Pages/ContactUs';
-
+import HeroBanner from '../Components/HeroBanner';
+import TermsCondition from './Pages/TermsCondition.jsx';
+import OurPresence from './Pages/OurPresence.jsx'; 
 
 function App() {
   return (
     <>
       {/* Page Components */}
-       <Home />
+      <Home />
       <Blogs />
-      <Campaign />
+      <HeroBanner />
+      <OurPresence /> 
+      <Campaign /> 
       <Line />
       <Customer_Review />
       <How_We_Work /> 
       <ScrapRate />
       <StorePage /> 
-      <ContactUs />
+      <ContactUs /> 
+      <TermsCondition />
+      
+
+      {/* <Chatbot /> */}
       <Footer />
     </>
   );

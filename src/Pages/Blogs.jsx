@@ -16,7 +16,7 @@ const Blogs = () => {
       };
 
   return (
-    <div class="Blog w-full h-[100vh]">
+    <div class="Blog w-full h-[100vh] text-white    ">
         <div className='text-center text-5xl pt-8'>
             <h1>BLOGS</h1>
         </div>
