@@ -8,7 +8,7 @@ const Subscribe = () => {
       <div className="input-wrapper ">
         <div className='flex justify-center items-center'>
         <Gmail_svg className="" />
-        <input type="text" name="text" className="input" placeholder="Enter Emial" />
+        <input type="text" name="text" className="input" placeholder="Enter Email" />
         </div>
         <div className='h-full self-end'> 
         <button className="Subscribe-btn">
