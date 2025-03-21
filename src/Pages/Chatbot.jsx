@@ -1,165 +1,158 @@
-"use client";
+import React, { useState, useEffect } from 'react';
+import '../Chatbot.css';
+import robot from '../../Components/images/robot.png'
 
-import { useState, useRef, useEffect } from "react";
-import { useChat } from "@ai-sdk/react";
-import { Avatar } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { X, Smile, ImageIcon, Send } from "lucide-react";
-
-export default function ChatFlow() {
-  const chat = useChat();
-  const messages = chat.messages;
-  const input = chat.input;
-  const handleInputChange = chat.handleInputChange;
-  const handleSubmit = chat.handleSubmit;
-  const isLoading = chat.isLoading;
-
-  const messagesEndRef = useRef(null);
-  const [isOpen, setIsOpen] = useState(true);
-
-  useEffect(() => {
-    if (messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+const ChatFlow = () => {
+  const [messages, setMessages] = useState([
+    {
+      id: 1,
+      text: 'Hello, how are you doing?',
+      sender: 'user',
+      time: '08:15 AM'
+    },
+    {
+      id: 2,
+      text: 'I\'m doing well, thank you! How can I help you today?',
+      sender: 'assistant',
+      time: '08:16 AM'
+    },
+    {
+      id: 3,
+      text: 'I have a question about the return policy for a product I purchased.',
+      sender: 'user',
+      time: 'Just Now'
     }
-  }, [messages]);
+  ]);
+  const [inputText, setInputText] = useState('');
+  const [isTyping, setIsTyping] = useState(true);
+  const [showChat, setShowChat] = useState(false); // State to toggle chat visibility
 
-  const formatTime = (date) => {
-    return date.toLocaleTimeString("en-US", {
-      hour: "numeric",
-      minute: "2-digit",
-      hour12: true,
-    });
+  // Simulate assistant typing
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsTyping(false);
+    }, 5000);
+    
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleSendMessage = () => {
+    if (inputText.trim() === '') return;
+    
+    const newMessage = {
+      id: messages.length + 1,
+      text: inputText,
+      sender: 'user',
+      time: 'Just Now'
+    };
+    
+    setMessages([...messages, newMessage]);
+    setInputText('');
+    
+    // Simulate assistant typing
+    setIsTyping(true);
+    setTimeout(() => {
+      const assistantReply = {
+        id: messages.length + 2,
+        text: 'I understand you have a question about our return policy. Products can be returned within 30 days of purchase with a valid receipt.',
+        sender: 'assistant',
+        time: 'Just Now'
+      };
+      setMessages(prev => [...prev, assistantReply]);
+      setIsTyping(false);
+    }, 2000);
   };
-
-  const getRelativeTime = (date) => {
-    const now = new Date();
-    const diffInMinutes = Math.floor((now.getTime() - date.getTime()) / (1000 * 60));
-
-    return diffInMinutes < 5 ? "Just Now" : formatTime(date);
-  };
-
-  if (!isOpen) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 w-full max-w-sm h-[600px] rounded-lg overflow-hidden flex flex-col shadow-xl">
-      {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-500 p-6 text-white">
-        <div className="flex justify-between items-start">
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-              <span className="text-blue-600 text-2xl font-bold">C</span>
+    <>
+      {/* Floating Bot Icon */}
+      <div className="floating-bot-icon" onClick={() => setShowChat(!showChat)}>
+        <img src={robot} alt="Chatbot Icon" />
+      </div>
+
+      {/* Chatbot UI */}
+      {showChat && (
+        <div className="chat-container">
+          <div className="chat-header">
+            <div className="header-content">
+              <div className="logo-container">
+                <div className="logo">C</div>
+              </div>
+              <div className="title-container">
+                <h1>ECLYRA</h1>
+                <p>A live chat interface that allows for seamless, natural communication and connection.</p>
+              </div>
             </div>
-            <div>
-              <h1 className="text-2xl font-bold">ChatFlow</h1>
-              <p className="text-sm opacity-90 mt-1 max-w-[250px]">
-                A live chat interface that allows for seamless, natural communication and connection.
-              </p>
-            </div>
+            <button className="close-button" onClick={() => setShowChat(false)}>×</button>
           </div>
-          <button
-            onClick={() => setIsOpen(false)}
-            className="bg-white/20 rounded-full p-1 hover:bg-white/30 transition-colors"
-          >
-            <X className="h-5 w-5" />
-          </button>
-        </div>
-      </div>
-
-      {/* Chat messages */}
-      <div className="flex-1 bg-[#0a0a1a] p-4 overflow-y-auto">
-        <div className="space-y-6">
-          {messages.length === 0 ? (
-            <>
-              <div className="flex justify-end">
-                <div className="max-w-[80%]">
-                  <div className="bg-blue-600 text-white p-3 rounded-lg">Hello, how are you doing?</div>
-                  <div className="text-gray-400 text-xs mt-1 text-right">{formatTime(new Date(Date.now() - 60000))}</div>
-                </div>
-              </div>
-              <div className="flex items-start gap-2">
-                <Avatar>
-                  <img src="/placeholder.svg?height=40&width=40" alt="Assistant" className="rounded-full" />
-                </Avatar>
-                <div className="max-w-[80%]">
-                  <div className="text-white text-sm font-medium">Assistant</div>
-                  <div className="bg-[#1e1e3a] text-white p-3 rounded-lg mt-1">
-                    I'm doing well, thank you! How can I help you today?
+          
+          <div className="chat-messages">
+            {messages.map((message) => (
+              <div key={message.id} className={`message ${message.sender}`}>
+                {message.sender === 'assistant' && (
+                  <div className="avatar">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-03-20%20at%2010.00.07%E2%80%AFAM-KWk2rBfZvTEF1FPRyzxPxhLVeKdaDM.png" alt="Assistant" />
                   </div>
-                  <div className="text-gray-400 text-xs mt-1">{formatTime(new Date())}</div>
-                </div>
-              </div>
-            </>
-          ) : (
-            messages.map((message, index) => (
-              <div key={index} className={message.role === "user" ? "flex justify-end" : "flex items-start gap-2"}>
-                {message.role === "assistant" && (
-                  <Avatar>
-                    <img src="/placeholder.svg?height=40&width=40" alt="Assistant" className="rounded-full" />
-                  </Avatar>
                 )}
-                <div className="max-w-[80%]">
-                  {message.role === "assistant" && <div className="text-white text-sm font-medium">Assistant</div>}
-                  <div
-                    className={`${
-                      message.role === "user" ? "bg-blue-600 text-white" : "bg-[#1e1e3a] text-white"
-                    } p-3 rounded-lg ${message.role === "assistant" ? "mt-1" : ""}`}
-                  >
-                    {message.content}
-                  </div>
-                  <div className={`text-gray-400 text-xs mt-1 ${message.role === "user" ? "text-right" : ""}`}>
-                    {getRelativeTime(new Date(message.createdAt || Date.now()))}
+                <div className="message-content">
+                  {message.sender === 'assistant' && <div className="sender">Assistant</div>}
+                  <div className="bubble">{message.text}</div>
+                  <div className="timestamp">{message.time}</div>
+                </div>
+              </div>
+            ))}
+            
+            {isTyping && (
+              <div className="message assistant">
+                <div className="avatar">
+                  <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-03-20%20at%2010.00.07%E2%80%AFAM-KWk2rBfZvTEF1FPRyzxPxhLVeKdaDM.png" alt="Assistant" />
+                </div>
+                <div className="message-content">
+                  <div className="sender">Assistant</div>
+                  <div className="bubble typing">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                   </div>
                 </div>
               </div>
-            ))
-          )}
-
-          {/* Loading indicator */}
-          {isLoading && (
-            <div className="flex items-start gap-2">
-              <Avatar>
-                <img src="/placeholder.svg?height=40&width=40" alt="Assistant" className="rounded-full" />
-              </Avatar>
-              <div className="max-w-[80%]">
-                <div className="text-white text-sm font-medium">Assistant</div>
-                <div className="bg-[#1e1e3a] text-white p-3 rounded-lg mt-1 flex space-x-1">
-                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: "0ms" }}></div>
-                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: "150ms" }}></div>
-                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: "300ms" }}></div>
-                </div>
-              </div>
-            </div>
-          )}
-          <div ref={messagesEndRef} />
+            )}
+          </div>
+          
+          <div className="chat-input">
+            <button className="emoji-button">
+              <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                <line x1="15" y1="9" x2="15.01" y2="9"></line>
+              </svg>
+            </button>
+            <input 
+              type="text" 
+              placeholder="Reply..." 
+              value={inputText}
+              onChange={(e) => setInputText(e.target.value)}
+              onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
+            />
+            <button className="attachment-button">
+              <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+              </svg>
+            </button>
+            <button className="send-button" onClick={handleSendMessage}>
+              <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </div>
         </div>
-      </div>
-
-      {/* Input area */}
-      <div className="bg-[#0a0a1a] border-t border-gray-800 p-3">
-        <form onSubmit={handleSubmit} className="flex items-center gap-2">
-          <Button type="button" variant="ghost" size="icon" className="text-gray-400">
-            <Smile className="h-5 w-5" />
-          </Button>
-          <Input
-            value={input}
-            onChange={handleInputChange}
-            placeholder="Reply..."
-            className="flex-1 bg-transparent border-none text-white focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-gray-400"
-          />
-          <Button type="button" variant="ghost" size="icon" className="text-gray-400">
-            <ImageIcon className="h-5 w-5" />
-          </Button>
-          <Button
-            type="submit"
-            size="icon"
-            className="rounded-full bg-blue-600 hover:bg-blue-700"
-            disabled={isLoading || !input.trim()}
-          >
-            <Send className="h-5 w-5" />
-          </Button>
-        </form>
-      </div>
-    </div>
+      )}
+    </>
   );
-}
+};
+
+export default ChatFlow;
