@@ -1,0 +1,10 @@
+.phoneNumberInput{
+    border-radius: 3px;
+    height: 40px;
+    padding: 4px;
+}
+
+.selectTypeOfWaste{
+    display: flex;
+    flex-direction: column;
+}
