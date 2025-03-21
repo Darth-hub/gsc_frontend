@@ -12,21 +12,30 @@
   "dependencies": {
     "@ai-sdk/react": "^1.1.23",
     "@gsap/react": "^2.1.2",
-    "@mantine/core": "^7.17.2",
+    "@mantine/dates": "^7.17.2",
+    "@mantine/form": "^7.17.2",
     "@mantine/hooks": "^7.17.2",
-    "@mantine/notifications": "^7.17.2",
     "@tabler/icons-react": "^3.31.0",
     "@tailwindcss/vite": "^4.0.14",
-    "axios": "^1.8.4",
+    "axios": "^1.8.3",
+    "dayjs": "^1.11.13",
+    "framer-motion": "^12.5.0",
+    "@mantine/core": "^7.17.2",
+    "@mantine/notifications": "^7.17.2",
     "gsap": "^3.12.7",
     "lucide-react": "^0.482.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-input-mask": "^2.0.4",
+    "react-phone-number-input": "^3.4.12",
     "react-router-dom": "^7.3.0",
     "react-router-hash-link": "^2.4.3",
     "react-slick": "^0.30.3",
+    "react-toastify": "^11.0.5",
     "remixicon": "^4.6.0",
     "slick-carousel": "^1.8.1",
+    "styled-components": "^6.1.15",
+    "tailwindcss": "^4.0.14",
     "styled-components": "^6.1.15"
   },
   "devDependencies": {
@@ -43,7 +52,7 @@
     "postcss": "^8.5.3",
     "postcss-preset-mantine": "^1.17.0",
     "postcss-simple-vars": "^7.0.1",
+    "vite": "^6.0.5",
     "tailwindcss": "^4.0.14",
-    "vite": "^6.2.2"
   }
 }

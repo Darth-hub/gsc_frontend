@@ -1,9 +1,13 @@
 import React from 'react'
 import 'remixicon/fonts/remixicon.css'
 import { HashLink as Link } from "react-router-hash-link";
+import { notifications } from '@mantine/notifications';
+import { ToastContainer, toast } from 'react-toastify';
 
 
 const Join_community = () => {
+
+  const notify = () => toast("Registered!");
   return (
     <>
     <div className='text-white'>
@@ -31,7 +35,7 @@ const Join_community = () => {
             <button className='bg-white text-[#277868] rounded-xl px-2 py-1 font-semibold text-[0.80em]'>Reviews</button>
           </div>
           <div>
-            <button className='bg-[#277868] text- rounded-xl px-4 py-1 font-semibold text-[0.80em]'>Register</button>
+            <button className='bg-[#277868] cursor-pointer text- rounded-xl px-4 py-1 font-semibold text-[0.80em]' onClick={notify}>Register</button><ToastContainer className="text-green"/>
           </div>
         </div>
         <div className='flex gap-1 text-[#C5CFCB]'>
