@@ -105,3 +105,7 @@ h1{
   background-color: #222C1D;
   background: linear-gradient(to top, rgba(27, 35, 22, 1), rgba(27, 35, 22, 1));
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

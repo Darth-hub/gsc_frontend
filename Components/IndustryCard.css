@@ -1,0 +1,40 @@
+.Industrycard {
+    background-color: #222C1D;
+    min-width:30vw;
+    margin: 1.5vw;
+  }
+  
+  /* @media (prefers-color-scheme: dark) {
+    .Industrycard {
+      background-color: #1a1b1e; 
+    }
+  } */
+  
+  .Industrysection {
+    background-color: #222C1D;
+    border-bottom: 1px solid #e0e0e0; 
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .Industrysection {
+      border-bottom: 1px solid #2c2e33; 
+    }
+  }
+  
+  .Industrylike {
+    color: green; 
+    width: 20px;
+    height: 20px;
+  }
+
+  
+  .Industrylabel {
+    text-transform: uppercase;
+    font-size: 12px; 
+    font-weight: 700;
+  }
+
+  
