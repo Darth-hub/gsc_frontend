@@ -13,9 +13,13 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <>
-    <div className='flex items-center justify-around '>
+    <div className='flex items-center gap-20 justify-between'>
+      <div>
       <Header />
-      <button class="button px-3 py-1 mr-10 rounded-lg mt-6"><p class="text">login/sign up</p></button>
+      </div>
+      <div>
+      <button class="button px-3 py-1 mr-10 rounded-lg justify-self-end mt-6"><p class="text">login/sign up</p></button>
+      </div>
     </div>
     <div className='flex gap-35 mt-8 text-white'>
         <div className=' flex flex-col  w-[35vw] ml-40 mt-14'>

@@ -22,6 +22,7 @@ import TermsCondition from './Pages/TermsCondition.jsx'
 const Landing_Page = () => {
   return (
     <>
+    <User_profile />
     <Home />
     <Line />
     <Blogs />
@@ -30,8 +31,6 @@ const Landing_Page = () => {
     <Campaign />
     <Customer_Review />
     <How_We_Work />
-    <BlogPage />
-    <TermsCondition />
     <Footer />
     </>
   )

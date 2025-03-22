@@ -10,9 +10,7 @@ import Landing_Page from './Landing_Page';
 import Community from './Pages/Community.jsx';
 import Join_community from './Pages/User/Join_community.jsx';
 import User_dashboard from './Pages/User/User_dashboard.jsx';
-import { Contact } from 'lucide-react';
 import BlogPage from './Pages/BlogsPage.jsx';
-import Store from './Pages/StorePage';
 
 function App() {
   return (
@@ -31,6 +29,8 @@ function App() {
       <Route path='/scrap_rate' element={<ScrapRate />} />
       <Route path='/contact' element={<ContactUs />} />
       <Route path='/store' element={<StorePage />} />
+      <Route path='/terms&condition' element={<TermsCondition />} />
+      <Route path="/blogs" element={<BlogPage />} />
     </Routes>
 
 

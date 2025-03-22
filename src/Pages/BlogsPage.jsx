@@ -1,5 +1,7 @@
 import { Search } from "lucide-react";
 import { useState } from "react"; // Import useState for search functionality
+import Footer from "../../Components/Footer";
+import Header from "../../Components/Header";
 
 
 
@@ -134,7 +136,9 @@ export default function BlogPage() {
   );
 
   return (
-    <div className="min-h-screen bg-green-700">
+    <div className="bg-green-700">
+      <Header />
+      <div className="min-h-screen bg-green-700">
       <main className="relative z-10 max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
@@ -182,12 +186,15 @@ export default function BlogPage() {
         </div>
       </main>
     </div>
+    <Footer />
+    </div>
   );
 }
 
 function BlogCard({ category, title, description, image, author, onClick }) {
   return (
-    <div
+    <div>
+      <div
       className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full transform transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer"
       onClick={onClick} // Make the card clickable
     >
@@ -230,6 +237,8 @@ function BlogCard({ category, title, description, image, author, onClick }) {
           </div>
         </div>
       </div>
+    </div>
+    
     </div>
   );
 }
