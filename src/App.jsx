@@ -14,6 +14,8 @@ import BlogPage from './Pages/BlogsPage.jsx';
 import Expandedblogs from '../Components/Expandedblogs.jsx';
 import Authentication from  '../src/Pages/Authentication.jsx'
 import SchedulePickUp from './Pages/SchedulePickUp.jsx'
+import User_profile from './Pages/User/User_profile.jsx';
+
 
 
 function App() {
@@ -29,7 +31,7 @@ function App() {
     <Routes>
       <Route path='/community' element={<Community />} />
       <Route path='/Join_community' element={<Join_community />} />
-      <Route path='/User' element={<User_dashboard />} />
+      <Route path='/User' element={<User_profile />} />
       <Route path='/scrap_rate' element={<ScrapRate />} />
       <Route path='/contact' element={<ContactUs />} />
       <Route path='/store' element={<StorePage />} />
