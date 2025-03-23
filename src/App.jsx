@@ -11,6 +11,8 @@ import Community from './Pages/Community.jsx';
 import Join_community from './Pages/User/Join_community.jsx';
 import User_dashboard from './Pages/User/User_dashboard.jsx';
 import BlogPage from './Pages/BlogsPage.jsx';
+import Expandedblogs from '../Components/Expandedblogs.jsx';
+
 
 function App() {
   return (
@@ -31,6 +33,7 @@ function App() {
       <Route path='/store' element={<StorePage />} />
       <Route path='/terms&condition' element={<TermsCondition />} />
       <Route path="/blogs" element={<BlogPage />} />
+      <Route path="/blog" element={<Expandedblogs />} />
     </Routes>
 
 

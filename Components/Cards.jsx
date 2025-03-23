@@ -1,17 +1,50 @@
-import React from 'react'
-import "../src/App.css"
+import React, { useContext } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "../src/App.css";
+import { Link } from "react-router-dom";
+import { BlogContext } from "../src/Pages/User/Blogdata";
 
-const Cards = ({title, content}) => {
+const Cards = () => {
+  const { blogs } = useContext(BlogContext);
+
   return (
-  <div class="card h-[55vh] w-[30vw] py-5 rounded-2xl">
-    <p class="header">What is E-Waste?</p>
-      <div class="main-content">
-        <p class="heading" className='text-m'>E-waste refers to discarded electrical or electronic devices. This includes everything from outdated smartphones and computers to batteries, chargers, televisions, and even household appliances like refrigerators and washing machines. According to studies, the world generates around 50 million tons of e-waste annually, and only a small fraction of it is properly recycled.</p>
-      </div>
-  <div class="footer">by Ayush</div>
-</div>
+    <div className="h-[400px] flex">
+      <Swiper 
+      modules={[Navigation, Pagination, Autoplay]}
+      spaceBetween={20}
+      slidesPerView={1}
+      navigation
+      pagination={{ clickable: true }}
+      autoplay={{ delay: 3000 }}
+      breakpoints={{
+        640: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      }}
+      className="mySwiper"
+      >
+        {blogs.map((blog) => (
+          <SwiperSlide key={blog.id} className="scale-90">
+            <Link smooth to={`/blog`} state={{blog}}> {/* Pass blog data as state */}
+              <button className="card h-[55vh] flex text-center w-[30vw] py-5 rounded-2xl shadow-lg bg-white">
+                <div className="p-4">
+                  <p className="header text-3xl text-center font-semibold">{blog.title}</p>
+                  <p className="text-m mt-2">{blog.description.substring(0, 300)}...</p>
+                </div>
+                <div className="footer text-sm mt-4">
+                  by {blog.author.name} on {blog.author.date}
+                </div>
+              </button>
+            </Link>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  );
+};
 
-  )
-}
-
-export default Cards
+export default Cards;

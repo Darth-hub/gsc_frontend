@@ -19,11 +19,12 @@ import Store from './Pages/StorePage.jsx';
 import BlogPage from './Pages/BlogsPage.jsx';
 import TermsCondition from './Pages/TermsCondition.jsx'
 import Chatbot from './Pages/Chatbot.jsx'
+import Expandedblogs from '../Components/Expandedblogs.jsx';
 
 const Landing_Page = () => {
   return (
     <>
-    <User_profile />
+
     <Home />
     <Line />
     <Blogs />
