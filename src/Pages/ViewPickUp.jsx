@@ -330,10 +330,10 @@ const ViewPickUp = () => {
       <div className="flex">
         {showFirst && (
           <div>
-            <div className="h-[600px]  mr-[20px] w-[40vw] rounded-md mt-1.5">
+            <div className="h-[600px]  mr-[20px] w-[50vw] rounded-md mt-1.5">
               <Map originLocation={currentLocation.current} destinationLocation={PickUpLocation} getDistance={getDistance} />
             </div>
-            <div className="bg-green-700 h-[430px] mt-[1vw] mr-[20px] h-[38vh] rounded-md flex flex-col">
+            <div className="bg-green-700 h-[450px] mt-[1vw] mr-[20px] rounded-md flex flex-col">
               <div className="text-xl gap-1 border p-[0.1vh] m-[0.1vh] ml-[0.5vw] mr-[0.5vw] pl-[0.5vw] pr-[0.5vw] mt-[0.4vh] overflow-x-auto scrollbar-hide rounded-md">
                 Seller : {data.sellerName}
               </div>

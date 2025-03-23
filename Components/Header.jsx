@@ -22,6 +22,7 @@ const Header = () => {
             <Link smooth to="/blogs">BLOGS</Link>
             <Link smooth to="/community">JOIN COMMUNITY</Link>
             {user === 'Seller' && <Link smooth to="/User">MY PROFILE</Link>}
+            
         </div>
       </nav>
 
