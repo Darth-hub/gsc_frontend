@@ -2,9 +2,12 @@ import React from 'react'
 import eclyralogo from './images/eclyralogo.png'
 import 'remixicon/fonts/remixicon.css'
 import { HashLink as Link } from "react-router-hash-link";
+import { useAuth } from '../src/Context/AuthContext';
 
 
 const Header = () => {
+  const {user} = useAuth()
+
   return (
     <div className='h-20  flex items-center pt-1 bg-transparent   text-white'>
       <nav className='flex  items-end w-full pl-8 '>
@@ -18,12 +21,9 @@ const Header = () => {
             <Link smooth to="/store">STORE</Link>
             <Link smooth to="/blogs">BLOGS</Link>
             <Link smooth to="/community">JOIN COMMUNITY</Link>
-            <Link smooth to="/User">MY PROFILE</Link>
+            {user.role === 'Seller' && <Link smooth to="/User">MY PROFILE</Link>}
             
         </div>
-        {/* <div>
-        <i class="ri-menu-3-line text-[2rem] absolute top-5 right-10"></i>
-        </div> */}
       </nav>
 
     </div>

@@ -83,7 +83,7 @@ export default function AuthenticationForm() {
           message: 'Your session is live now'
         })
         setPressed(false)
-        // navigate('/')
+        navigate('/')
         // redirect
       } catch (error) {
         setPressed(false)

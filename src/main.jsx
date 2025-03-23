@@ -19,10 +19,11 @@ createRoot(document.getElementById('root')).render(
       <MantineProvider>
         <Notifications />
           <AuthProvider>
-          <BlogProvider>
-          <App />
-          </BlogProvider>
-            
+            <DataProvider>
+            <BlogProvider>
+              <App />
+            </BlogProvider>
+            </DataProvider>
           </AuthProvider>
       </MantineProvider>
     </BrowserRouter>

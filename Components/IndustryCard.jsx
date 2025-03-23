@@ -22,7 +22,7 @@ const mockdata = {
 
 export default function IndustryCard({id,name,description,location,image}) {
   const {badges} = mockdata
-  const url = `/viewindustries/${id}`
+  const url = `/selltoindustries/${id}`
 
   const features = badges.map((badge) => (
     <Badge  variant="light" color="green" key={badge.label} >
