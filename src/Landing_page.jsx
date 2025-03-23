@@ -34,8 +34,8 @@ const Landing_Page = () => {
     <Customer_Review />
     <How_We_Work />
     <Footer />
-    <Chatbot />
-    
+    {/* <Chatbot />
+     */}
     </>
   )
 }
