@@ -18,6 +18,7 @@ import Join_community from './Pages/User/Join_community'
 import Store from './Pages/StorePage.jsx';
 import BlogPage from './Pages/BlogsPage.jsx';
 import TermsCondition from './Pages/TermsCondition.jsx'
+import Chatbot from './Pages/Chatbot.jsx'
 
 const Landing_Page = () => {
   return (
@@ -32,6 +33,8 @@ const Landing_Page = () => {
     <Customer_Review />
     <How_We_Work />
     <Footer />
+    <Chatbot />
+    
     </>
   )
 }

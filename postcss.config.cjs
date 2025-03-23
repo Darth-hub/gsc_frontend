@@ -1,4 +1,4 @@
-const postCSS = {
+const postcssConfig = {
     plugins: {
       'postcss-preset-mantine': {},
       'postcss-simple-vars': {
@@ -13,4 +13,5 @@ const postCSS = {
     },
   };
 
-  export default postCSS
+  export default postcssConfig
+  
