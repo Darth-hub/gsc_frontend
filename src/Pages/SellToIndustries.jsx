@@ -21,7 +21,7 @@ import { DataContext } from '../Context/DataContext';
 
   export function SellToIndustries() {
     const [phone, setPhone] = useState('');
-    const [country, setCountry] = useState('US'); // Default country
+    const [country, setCountry] = useState('IN'); // Default country
     const {id} = useParams()
     const { Industrydata } = useContext(DataContext) 
     const divRef1 = useRef(null);

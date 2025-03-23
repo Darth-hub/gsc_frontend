@@ -119,7 +119,7 @@ h1{
   display: none;
 }
 
-.wrap-input-17 * {
+/* .wrap-input-17 * {
   box-sizing: border-box;
   
  }
@@ -187,4 +187,4 @@ h1{
   border-bottom:1px solid 
  rgba(255,255,255,.5);
   transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
- }
+ } */

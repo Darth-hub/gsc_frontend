@@ -25,8 +25,8 @@ import {
 const auth = getAuth(app)
 const provider = new GoogleAuthProvider()
 
-const url = process.env.BACKEND_URL
-   
+const url = import.meta.env.VITE_BACKEND_URL;
+
 export default function AuthenticationForm() {
     const navigate = useNavigate()
     const [type, toggle] = useToggle(['login', 'register']);    
@@ -83,7 +83,7 @@ export default function AuthenticationForm() {
           message: 'Your session is live now'
         })
         setPressed(false)
-        navigate('/home')
+        navigate('/')
         // redirect
       } catch (error) {
         setPressed(false)
@@ -115,7 +115,6 @@ export default function AuthenticationForm() {
           })
         }
         setPressed(false)
-        // redirect
       }catch(error){
         setPressed(false)
         console.error(error)
@@ -143,12 +142,12 @@ export default function AuthenticationForm() {
         <Text size="lg" color='black' fw={500}>
           Welcome to Eclyra, {type} with
         </Text>
+          <Group grow mb="md" mt="md">
+         <GoogleButton onClick={googleUser} radius="xl">Google</GoogleButton>
+           <TwitterButton radius="xl">Twitter</TwitterButton>
+      </Group>
   
-        <Group grow mb="md" mt="md">
-          <GoogleButton onClick={googleUser} radius="xl">Google</GoogleButton>
-          <TwitterButton radius="xl">Twitter</TwitterButton>
-        </Group>
-  
+
         <Divider style={{color : 'black'}} styles={{ label: { color: "black" }}} label="Or continue with email" labelPosition="center" my="lg" />
   
         <form onSubmit={form.onSubmit(() => {type === 'login' ? loginUser() : signupUser()})}>

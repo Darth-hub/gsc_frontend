@@ -10,15 +10,21 @@ import Landing_Page from './Landing_Page';
 import Community from './Pages/Community.jsx';
 import Join_community from './Pages/User/Join_community.jsx';
 import User_dashboard from './Pages/User/User_dashboard.jsx';
-import { Contact } from 'lucide-react';
 import BlogPage from './Pages/BlogsPage.jsx';
-import Store from './Pages/StorePage';
+import Expandedblogs from '../Components/Expandedblogs.jsx';
+import Authentication from  '../src/Pages/Authentication.jsx'
+import SchedulePickUp from './Pages/SchedulePickUp.jsx'
+import User_profile from './Pages/User/User_profile.jsx';
+import  ViewPickUp from './Pages/ViewPickUp.jsx'
+import SellToIndustries from './Pages/SellToIndustries.jsx'
+import ViewIndustries from './Pages/ViewIndustries.jsx';
+import { View } from 'lucide-react';
+
 
 function App() {
   return (
-    <>
-    
-    
+    <>    
+
     <Routes>
       <Route path='/' element={<Landing_Page />} />
     </Routes>
@@ -27,13 +33,19 @@ function App() {
     <Routes>
       <Route path='/community' element={<Community />} />
       <Route path='/Join_community' element={<Join_community />} />
-      <Route path='/User' element={<User_dashboard />} />
+      <Route path='/User' element={<User_profile />} />
       <Route path='/scrap_rate' element={<ScrapRate />} />
       <Route path='/contact' element={<ContactUs />} />
       <Route path='/store' element={<StorePage />} />
+      <Route path='/terms&condition' element={<TermsCondition />} />
+      <Route path="/blogs" element={<BlogPage />} />
+      <Route path="/blog" element={<Expandedblogs />} />
+      <Route path="/login" element={<Authentication />} />
+      <Route path='/schedulepickup' element={<SchedulePickUp/>} />
+      <Route path='/viewPickUps' element={<ViewPickUp/>} />
+      <Route path='/viewindustries' element={<ViewIndustries/>} />
+      <Route path='selltoindustries/:id' element={<SellToIndustries/>} />
     </Routes>
-
-
     
     </>
   );

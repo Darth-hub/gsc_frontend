@@ -1,9 +1,19 @@
 import { Search } from "lucide-react";
-import { useState } from "react"; // Import useState for search functionality
+import React, { useContext, useState } from "react"; 
+// Import useState for search functionality
+import Footer from "../../Components/Footer";
+import Header from "../../Components/Header";
+import { HashLink as Link } from "react-router-hash-link";
+import { BlogContext } from "./User/Blogdata";
+
 
 
 
 export default function BlogPage() {
+
+  const { blogs } = useContext(BlogContext);
+
+
   // State for search input
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -127,7 +137,9 @@ export default function BlogPage() {
   );
 
   return (
-    <div className="min-h-screen bg-green-700">
+    <div className="bg-green-700">
+      <Header />
+      <div className="min-h-screen bg-green-700">
       <main className="relative z-10 max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
@@ -158,19 +170,31 @@ export default function BlogPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {/* Render filtered blogs */}
           {filteredBlogs.map((blog) => (
-            <BlogCard
-              key={blog.id}
-              category={blog.category}
-              title={blog.title}
-              description={blog.description}
-              image={blog.image}
-              author={blog.author}
-              onClick={() => {
-                // Redirect to a detailed blog page (replace with your logic)
-                alert(`Redirecting to blog: ${blog.title}`);
-                // Example: window.location.href = `/blog/${blog.id}`;
-              }}
-            />
+            <div>
+            <Link smooth to={`/blog`} state={{blog}}>
+            <button
+            className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full transform transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer"
+             // Make the card clickable
+          >
+            
+            <div className="p-6 flex flex-col text-center flex-grow">
+              <div className="text-sm font-medium text-purple-600 mb-2">{blog.category}</div>
+              <h3 className="text-2xl mb-3  font-semibold text-gray-900 flex items-center">
+                {blog.title}
+                
+              </h3>
+              <div className=" h-[150px]  overflow-auto"><p className="mt-2 text-sm  text-gray-600 flex-grow">{blog.description}</p></div>
+              <div className="mt-4 flex items-center">
+                
+                <div className="ml-3">
+                  <p className="text-sm font-medium text-gray-900">{blog.author.name}</p>
+                </div>
+              </div>
+            </div>
+          </button>
+            </Link>
+          
+          </div>
           ))}
         </div>
       </main>
@@ -226,3 +250,4 @@ function BlogCard({ category, title, description, image, author, onClick }) {
     </div>
   );
 }
+

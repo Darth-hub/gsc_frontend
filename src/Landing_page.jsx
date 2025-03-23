@@ -19,8 +19,24 @@ import Store from './Pages/StorePage.jsx';
 import BlogPage from './Pages/BlogsPage.jsx';
 import TermsCondition from './Pages/TermsCondition.jsx'
 import Chatbot from './Pages/Chatbot.jsx'
+import Expandedblogs from '../Components/Expandedblogs.jsx';
+import Authentication from './Pages/Authentication.jsx';
+import { useAuth } from './Context/AuthContext.jsx';
+import { Loader } from 'lucide-react';
+
 
 const Landing_Page = () => {
+  const { user, loading } = useAuth();
+  console.log(user)
+
+  if (loading) {
+    return (
+      <div className='flex justify-center items-center h-screen'>
+        <Loader size="lg" />
+      </div>
+    );
+  }
+
   return (
     <>
     <Home />
@@ -31,8 +47,6 @@ const Landing_Page = () => {
     <Campaign />
     <Customer_Review />
     <How_We_Work />
-    <BlogPage />
-    <TermsCondition />
     <Footer />
     {/* <Chatbot />
      */}

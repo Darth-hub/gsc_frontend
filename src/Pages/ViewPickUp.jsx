@@ -1,10 +1,9 @@
 import React, { useEffect, useRef, useState, useCallback, useMemo } from 'react';
 import { IconFilter } from '@tabler/icons-react';
-// import List_User_pickups from '../../Components/List_User_pickups.jsx';
+import List_User_pickups from '../../Components/List_User_pickups.jsx';
 import Map from '../../Components/Map.jsx';
 import { Loader, TextInput, Drawer, Button, SegmentedControl, NumberInput, Group, Box } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import classes from './ViewPickUp.module.css';
 import ScrapFilterForm from '../../Components/Filter.jsx';
 import axios from 'axios';
 import { useAuth } from '../Context/AuthContext.jsx';
@@ -12,8 +11,8 @@ import { notifications } from '@mantine/notifications';
 import { useNavigate } from 'react-router-dom'
 import { useForm } from '@mantine/form';
 
-const url = process.env.BACKEND_URL;
-const GOOGLE_MAPS_API_KEY = process.env.GOOGLE_MAPS_API_KEY;
+const url = import.meta.env.VITE_BACKEND_URL;
+const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
 
 const ViewPickUp = () => {
   const [showFirst, setShowFirst] = useState(false);
@@ -43,6 +42,7 @@ const ViewPickUp = () => {
   const [targetDate, setTargetDate] = useState(null)
 
   // const navigate = useNavigate()
+
 
   useEffect(() => {    
     if (!targetDate) {
@@ -418,7 +418,6 @@ const ViewPickUp = () => {
                 <TextInput
                   label="Search a pickup"
                   required
-                  classNames={classes}
                   w={400}
                   pb={50}
                   ml={9}

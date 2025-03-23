@@ -1,5 +1,7 @@
 import { Link } from "lucide-react"
 import { useState } from "react"
+import Header from "../../Components/Header"
+import Footer from "../../Components/Footer"
 
 export default function TermsOfService() {
   const [activeSection, setActiveSection] = useState(1)
@@ -26,6 +28,8 @@ export default function TermsOfService() {
   }
 
   return (
+    <div className="bg-zinc-900">
+    <Header  />
     <div className="min-h-screen bg-zinc-900 text-white p-6 md:p-12 relative overflow-hidden">
       {/* Background watermark text */}
       <div className="absolute text-center top-0 left-0 text-[10rem] font-bold text-zinc-800 opacity-20 whitespace-nowrap pointer-events-none">
@@ -171,6 +175,8 @@ export default function TermsOfService() {
 
       {/* Yellow border accent */}
       <div className="absolute top-0 bottom-0 right-0 w-2 bggreen-500"></div>
+    </div>
+    <Footer />
     </div>
   )
 }
