@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import './App.css'
 import Home from '../Components/Home'
@@ -22,14 +22,24 @@ import Chatbot from './Pages/Chatbot.jsx'
 import Expandedblogs from '../Components/Expandedblogs.jsx';
 import Authentication from './Pages/Authentication.jsx';
 import { useAuth } from './Context/AuthContext.jsx';
-import { Loader } from 'lucide-react';
+import Loader from '../Components/Loader.jsx';
+
+
 
 
 const Landing_Page = () => {
   const { user, loading } = useAuth();
-  console.log(user)
+  const [isPageLoading, setIsPageLoading] = useState(true); // Page Load State
 
-  if (loading) {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsPageLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer); // Cleanup timer
+  }, []);
+
+  if (isPageLoading) {
     return (
       <div className='flex justify-center items-center h-screen'>
         <Loader size="lg" />
@@ -39,6 +49,7 @@ const Landing_Page = () => {
 
   return (
     <>
+    <User_profile />
     <Home />
     <Line />
     <Blogs />

@@ -2,9 +2,13 @@ import React from 'react'
 import profile from '../../../Components/images/profilepic.png'
 import { HashLink as Link } from "react-router-hash-link";
 import eclyralogo from '../../../Components/images/eclyralogo.png'
-
+import axios from 'axios';
+import { useAuth } from '../../Context/AuthContext';
 
 const User_profile = () => {
+
+    const user = useAuth();
+
   return (
     <div className='w-screen flex justify-center gap-5 items-center h-screen bg-[#1b2316]'>
         <div className='bg-[#3D8D7A] flex flex-col gap-2.5 p-8 items-center rounded-xl w-[25%] h-[90%]'>
@@ -12,8 +16,8 @@ const User_profile = () => {
                 <div><img src={profile} alt="" className='w-[70px] aspect-square'  /></div>
                 <div className='text-xl'>
                 <h3>Hi,</h3>
-                <h1>Ayush Kumar</h1>
-                <h2 className='text-sm'>ayushkr2883@gmail.com</h2>
+                <h1>{user.user.displayName} </h1>
+                <h2 className='text-sm'>{user.user.email} </h2>
             </div>
             </div>
 
@@ -42,7 +46,7 @@ const User_profile = () => {
         </div>
 
         <div className='bg-[#3D8D7A] rounded-xl h-[90%] w-[60%]'>
-            <div className="h-[50%] w-[100%] bg-amber-400 p-2">
+            <div className="h-[50%] w-[100%] bg-amber-400 P-2">
                 <h2>ACTIVE PICKUPS</h2>
             </div>
 

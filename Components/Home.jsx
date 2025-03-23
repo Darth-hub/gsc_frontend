@@ -28,28 +28,43 @@ const Home = () => {
             <h1 className='text-[7em]' id='company'>ECLYRA</h1>
             <p className='text-[1.2em] relative bottom-8.5 left-2'>♻️ Sustainable Living, Simplified.</p>
             <p>At ECLYRA, we simplify waste management by connecting you with reliable recycling solutions. Dispose of e-waste, plastics, metals, and paper responsibly—reducing pollution for a greener future. .</p>
+
           </div>
-          
-          {user.role === 'Seller' ? (
-            <Link smooth to='/schedulepickup'>
-              <button className='button rounded-xl mt-15 py-3 self-end mr-5 w-[60%]'>
-                Schedule Pickup Now
-              </button>
-            </Link>
-          ) : (
+
+          {
+            user ?
             <div>
-              <Link smooth to='/viewPickUps'>
+              {
+                user.role === 'Seller' ? (
+                  <Link smooth to='/schedulepickup'>
+                    <button className='button rounded-xl mt-15 py-3 self-end mr-5 w-[60%]'>
+                      Schedule Pickup Now
+                    </button>
+                  </Link>
+                ) : (
+                  <div>
+                    <Link smooth to='/viewPickUps'>
+                      <button className='button rounded-xl mt-15 py-3 self-end mr-5 w-[60%]'>
+                        PickUps
+                      </button>
+                    </Link>
+                    <Link smooth to='/viewindustries'>
+                      <button className='button rounded-xl mt-15 py-3 self-end mr-5 w-[60%]'>
+                        Sell To Industries
+                      </button>
+                    </Link>
+                  </div>
+                )
+              }
+            </div> :
+            <div>
+              <Link smooth to='/login'>
                 <button className='button rounded-xl mt-15 py-3 self-end mr-5 w-[60%]'>
-                  PickUps
-                </button>
-              </Link>
-              <Link smooth to='/viewindustries'>
-                <button className='button rounded-xl mt-15 py-3 self-end mr-5 w-[60%]'>
-                  Sell To Industries
+                  Get Started
                 </button>
               </Link>
             </div>
-          )}
+          }
         </div>
         <div className='relative flex justify-center items-center aspect-square'>
           <img src={logo} className='h-[75vh]' alt="ECLYRA Logo" />
