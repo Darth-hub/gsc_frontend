@@ -29,7 +29,7 @@ const Home = () => {
           <p className='text-[1.2em] relative bottom-8.5 left-2' >♻️ Sustainable Living, Simplified.</p>
           <p>At ECLYRA, we simplify waste management by connecting you with reliable recycling solutions. Dispose of e-waste, plastics, metals, and paper responsibly—reducing pollution for a greener future. </p>
           </div>
-          <Link smooth to=''>
+          <Link smooth to='/schedulepickup'>
           <button class='button rounded-xl mt-15 py-3 self-end mr-5 w-[60%]'><p class="text">Start Recycling Now</p></button>
           </Link>
         </div>

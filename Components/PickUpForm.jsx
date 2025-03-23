@@ -6,9 +6,9 @@ import { useAuth } from '../src/Context/AuthContext'
 import { notifications } from "@mantine/notifications";
 
 
-const apiKey = process.env.GOOGLE_MAPS_API_KEY; // Replace with your actual API key
+const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY; // Replace with your actual API key
 const endpoint = "https://places.googleapis.com/v1/places:autocomplete";
-const url = `${process.env.BACKEND_URL}/schedulepickup`
+const url = `${import.meta.env.VITE_BACKEND_URL}/schedulepickup`
 
 const indianStates = [
     "Andhra Pradesh",
@@ -408,7 +408,7 @@ export function PickUpForm({getData}) {
         /> */}
 
         <div className="mt-[2vw]">
-            <label htmlFor="dateInput" className="text-md">Pick a date : </label>
+            {/* <label htmlFor="dateInput" className="text-md">Pick a date : </label> */}
             <input
                 required
                 id="dateInput"
@@ -426,7 +426,7 @@ export function PickUpForm({getData}) {
         </div>
 
         <div className="mt-[1vw]">
-            <label htmlFor="timeInput" className="text-md">Pick a time : </label>
+            {/* <label htmlFor="timeInput" className="text-md">Pick a time : </label> */}
             <input
                 required
                 error={form.errors.time}
@@ -443,13 +443,9 @@ export function PickUpForm({getData}) {
             />
         </div>
         <div className="flex justify-between">
-            <div></div>
+            {/* <div></div> */}
             <Button type="submit" disabled={pressed} className="hover:scale-[1.08] transition-all duration-200 rounded-md mt-3 p-[0.3vw] hover:outline hover:outline-[3px] outline-[#209868]" color="#1B2316"> Order </Button>
-            <div></div>
-        </div>
-        <div>
-            {form.values.date}
-            {form.values.weight}
+            {/* <div></div> */}
         </div>
     </form>
 

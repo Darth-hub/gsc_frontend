@@ -13,12 +13,14 @@ import User_dashboard from './Pages/User/User_dashboard.jsx';
 import BlogPage from './Pages/BlogsPage.jsx';
 import Expandedblogs from '../Components/Expandedblogs.jsx';
 import Authentication from  '../src/Pages/Authentication.jsx'
-
+import SchedulePickUp from './Pages/SchedulePickUp.jsx'
 
 
 function App() {
   return (
     <>    
+    
+
     <Routes>
       <Route path='/' element={<Landing_Page />} />
     </Routes>
@@ -35,9 +37,8 @@ function App() {
       <Route path="/blogs" element={<BlogPage />} />
       <Route path="/blog" element={<Expandedblogs />} />
       <Route path="/login" element={<Authentication />} />
+      <Route path='/schedulepickup' element={<SchedulePickUp/>} />
     </Routes>
-
-
     
     </>
   );

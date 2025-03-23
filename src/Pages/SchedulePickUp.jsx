@@ -2,15 +2,17 @@ import React, { useState } from 'react'
 import PickUpForm from '../../Components/PickUpForm'
 import { Text } from '@mantine/core'
 import { useAuth } from '../Context/AuthContext'
+import LoginToContinue from './LoginToContinue'
 
 const SchedulePickUp = () => {
   const user = useAuth()
+  console.log(user)
 
   if(user){
     return (
       <div className='h-screen flex'>
           <div className='w-[60vw] p-20'>
-          <h1 className="title">
+          <h1 className="title text-white">
             Recycle Smarter with {' '}
             <Text mb='md' component="span" variant="gradient" gradient={{ from: 'green', to: 'cyan' }} inherit>
               ECLYRA 
@@ -29,9 +31,7 @@ const SchedulePickUp = () => {
     )
   }else{
     return(
-      <div>
-        access denied
-      </div>
+      <LoginToContinue/>
     )
   }
 
