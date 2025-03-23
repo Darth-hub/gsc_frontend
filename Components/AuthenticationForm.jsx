@@ -188,7 +188,7 @@ export default function AuthenticationForm() {
   
             {type === 'register' && (
               <div>
-                <div className='border border-white rounded-md pt-[1vh] pl-[2vw] pb-[2vh] mb-[2vh] mt-[2vh] mb-[2vh]'>
+                <div className='border border-white rounded-md pt-[1vh] pl-[2vw] pb-[2vh] mt-[2vh] mb-[2vh]'>
                   <p className='text-white text-md pb-[1vh]'>What are you interested in?</p>
                   <Chip.Group>
                     <Group 
