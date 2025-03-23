@@ -19,48 +19,47 @@ export default function Store() {
     {
       id: 2,
       title: "Eclyra Hoodie",
-      price: 700,
+      price: 600,
       image: "../Components/images/hoodie2.jpg",
       isSale: true,
     },
     {
       id: 3,
-      title: "Library Stool Chair",
-      price: 20,
-      image: "/public/pedophil.jpg",
+      title: "Eclyra Towel",
+      price: 700,
+      image: "../Components/images/towel.png",
     },
     {
       id: 4,
-      title: "Library Stool Chair",
-      price: 20,
-      image: "/public/pedophil.jpg",
+      title: "Eclyra Notebook",
+      price: 200,
+      image: "../Components/images/notebookStore.png",
     },
     {
       id: 5,
-      title: "Library Stool Chair",
-      price: 20,
-      image: "/public/pedophil.jpg",
+      title: "Eclyra BackPack",
+      price: 1000,
+      image: "../Components/images/backpackmain.png",
       isNew: true,
     },
     {
       id: 6,
-      title: "Library Stool Chair",
-      price: 20,
-      originalPrice: 30,
-      image: "/public/pedophil.jpg",
+      title: "Eclyra Laptop Sleeve",
+      price: 1500,
+      image: "../Components/images/laptopSleeve.png",
       isSale: true,
     },
     {
       id: 7,
-      title: "Library Stool Chair",
-      price: 20,
-      image: "/public/pedophil.jpg",
+      title: "Eclyra ToteBag",
+      price: 700,
+      image: "../Components/images/ToteBag.png",
     },
     {
       id: 8,
-      title: "Library Stool Chair",
-      price: 20,
-      image: "/public/pedophil.jpg",
+      title: "Eclyra Sipper",
+      price: 500,
+      image: "../Components/images/sipper.png",
     },
   ]
 
@@ -78,11 +77,12 @@ export default function Store() {
     <>
     <Header />
     <div className="max-w-7xl mx-auto p-6">
-      <h1 className="text-3xl font-bold text-left mb-8 text-white">Rewards and Prices</h1>
+    <h1 className="text-3xl font-bold text-white">Rewards and Prices</h1>
+    <span className="text-xl font-semibold text-yellow-400">Your Coins: 600</span>
       
 
       {/* Tabs */}
-      {/* <div className="flex justify-center mb-8">
+      <div className="flex justify-center mb-8">
         <div className="flex space-x-6">
           {tabs.map((tab) => (
             <button
@@ -96,7 +96,7 @@ export default function Store() {
             </button>
           ))}
         </div>
-      </div> */}
+      </div>
 
       {/* Product Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

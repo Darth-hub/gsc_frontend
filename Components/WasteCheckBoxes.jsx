@@ -11,7 +11,7 @@ export function ImageCheckbox({
   description,
   className,
   image,
-  ...others
+  ...others 
 }) {
   const [value, handleChange] = useUncontrolled({
     value: checked,

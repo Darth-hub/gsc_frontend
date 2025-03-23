@@ -11,41 +11,39 @@ export default function BlogPage() {
   const blogs = [
     {
       id: 1,
-      category: "Design",
-      title: "UX review presentations",
+      category: "E-Waste",
+      title: "The Hidden Dangers of E-Waste",
       description:
-        "How do you create compelling presentations that wow your colleagues and impress your managers?",
-      image: "/placeholder.svg?height=200&width=400",
+        "Electronic waste is growing rapidly. Learn how improper disposal affects the environment and how you can recycle responsibly.",
+      image: "../Components/images/ewaste_dangers.png",
       author: {
-        name: "Olivia Rhye",
-        date: "20 Jan 2022",
-        avatar: "/placeholder.svg?height=40&width=40",
+        name: "Ayush Ranjan",
+        date: "12 Mar 2025",
       },
     },
     {
       id: 2,
-      category: "Product",
-      title: "Migrating to Linear 101",
+      category: "Recycling",
+      title: "5 Simple Steps to Start Recycling Today",
       description:
-        "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here's how to get started.",
-      image: "/placeholder.svg?height=200&width=400",
+        "Recycling doesn't have to be complicated! Follow these 5 easy steps to make a difference for the planet.",
+      image: "../Components/images/recycling_tips.png",
       author: {
-        name: "Phoenix Baker",
-        date: "19 Jan 2022",
-        avatar: "/placeholder.svg?height=40&width=40",
+        name: "Rohit Khallar",
+        date: "08 Mar 2025",
       },
     },
     {
       id: 3,
-      category: "Software Engineering",
-      title: "Building your API Stack",
+      category: "General Waste",
+      title: "How to Reduce Daily Household Waste",
       description:
-        "The rise of RESTful APIs has been met by a rise in tools for creating, testing, and managing them.",
-      image: "/placeholder.svg?height=200&width=400",
+        "Cut down on waste at home with these practical and easy-to-follow tips for a sustainable lifestyle.",
+      image: "/images/household_waste.jpg",
       author: {
-        name: "Lana Steiner",
-        date: "18 Jan 2022",
-        avatar: "/placeholder.svg?height=40&width=40",
+        name: "Ayush Kumar",
+        date: "02 Mar 2025",
+
       },
     },
     {
@@ -56,74 +54,69 @@ export default function BlogPage() {
         "Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?",
       image: "/placeholder.svg?height=200&width=400",
       author: {
-        name: "Alec Whitten",
+        name: "Tanisha Rattan",
         date: "17 Jan 2022",
-        avatar: "/placeholder.svg?height=40&width=40",
       },
     },
     {
       id: 5,
-      category: "Product",
-      title: "PM mental models",
-      description:
-        "Mental models are simple expressions of complex processes or relationships.",
-      image: "/placeholder.svg?height=200&width=400",
-      author: {
-        name: "Demi Wilkinson",
-        date: "16 Jan 2022",
-        avatar: "/placeholder.svg?height=40&width=40",
+      category: "E-Waste",
+    title: "Are Your Old Gadgets Worth Anything?",
+    description:
+      "Before throwing out old electronics, check how you can refurbish, sell, or recycle them for a better purpose.",
+    image: "/images/sell_old_gadgets.jpg",
+    author: {
+      name: "Harsh",
+      date: "28 Feb 2025",
       },
     },
     {
       id: 6,
-      category: "Design",
-      title: "What is Wireframing?",
+      category: "Recycling",
+      title: "Plastic Waste: What Can and Can’t Be Recycled?",
       description:
-        "Introduction to Wireframing and its Principles. Learn from the best in the industry.",
-      image: "/placeholder.svg?height=200&width=400",
+        "Not all plastics are recyclable! Learn which types of plastic can be processed and which should be avoided.",
+      image: "/images/plastic_recycling.jpg",
       author: {
-        name: "Candice Wu",
-        date: "15 Jan 2022",
-        avatar: "/placeholder.svg?height=40&width=40",
+        name: "Manav Mathew",
+        date: "22 Feb 2025",
       },
     },
     {
       id: 7,
-      category: "Design",
-      title: "How collaboration makes us better designers",
+      category: "Food Waste",
+      title: "How to Reduce Food Waste at Home",
       description:
-        "Collaboration can make our teams stronger, and our individual designs better.",
-      image: "/placeholder.svg?height=200&width=400",
+        "Food waste is a major issue. Discover easy ways to store, reuse, and reduce waste in your kitchen.",
+      image: "/images/food_waste.jpg",
       author: {
-        name: "Alec Whitten",
-        date: "17 Jan 2022",
-        avatar: "/placeholder.svg?height=40&width=40",
+        name: "Vansh",
+        date: "15 Feb 2025",
       },
     },
     {
       id: 8,
-      category: "Product",
-      title: "Our top 10 Javascript frameworks to use",
+      category: "Sustainable Living",
+      title: "Eco-Friendly Alternatives to Daily Products",
       description:
-        "JavaScript frameworks make development easier with extensive features and functionalities.",
-      image: "/placeholder.svg?height=200&width=400",
+        "Switching to sustainable products can help reduce waste. Here are some great eco-friendly alternatives!",
+      image: "/images/eco_alternatives.jpg",
       author: {
-        name: "Demi Wilkinson",
-        date: "16 Jan 2022",
+        name: "Govind",
+        date: "10 Feb 2025",
         avatar: "/placeholder.svg?height=40&width=40",
       },
     },
     {
       id: 9,
-      category: "Customer Success",
-      title: "Podcast: Creating a better CX Community",
+      category: "Waste Innovations",
+      title: "Smart Waste Management: How AI is Changing Recycling",
       description:
-        "Starting a community doesn't need to be complicated, but how do you get started?",
-      image: "/placeholder.svg?height=200&width=400",
+        "AI and automation are transforming waste management. Discover how technology is improving recycling efficiency.",
+      image: "/images/smart_waste.jpg",
       author: {
-        name: "Candice Wu",
-        date: "15 Jan 2022",
-        avatar: "/placeholder.svg?height=40&width=40",
+        name: "",
+        date: "01 Feb 2025",
       },
     },
   ];
@@ -192,7 +185,7 @@ function BlogCard({ category, title, description, image, author, onClick }) {
       onClick={onClick} // Make the card clickable
     >
       <div className="relative h-48 w-full">
-        <img src={image || "/placeholder.svg"} alt={title} className="object-cover w-full h-full" />
+      <img src={image || "/placeholder.svg"} alt={title} className="w-full h-full object-contain" />
       </div>
       <div className="p-6 flex flex-col flex-grow">
         <div className="text-sm font-medium text-purple-600 mb-2">{category}</div>
@@ -220,8 +213,8 @@ function BlogCard({ category, title, description, image, author, onClick }) {
               className="h-10 w-10 rounded-full"
               src={author.avatar || "/placeholder.svg"}
               alt={author.name}
-              width={40}
-              height={40}
+              width={80}
+              height={80}
             />
           </div>
           <div className="ml-3">
