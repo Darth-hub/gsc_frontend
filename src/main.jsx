@@ -8,8 +8,7 @@ import { createTheme, MantineProvider } from '@mantine/core';
 import Header from '../Components/Header.jsx'
 import { DataProvider } from './Context/DataContext.jsx';
 import { AuthProvider } from './Context/AuthContext.jsx';
-import { MantineProvider } from '@mantine/core';
-import '@mantine/core/styles.css';
+import { Notifications } from '@mantine/notifications';
 
 
 createRoot(document.getElementById('root')).render(
@@ -17,10 +16,10 @@ createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <MantineProvider>
         <Notifications />
-          <AuthProvider>
-            <Header />
+          {/* <AuthProvider> */}
+            {/* <Header /> */}
             <App />
-          </AuthProvider>
+          {/* </AuthProvider> */}
       </MantineProvider>
     </BrowserRouter>
   </StrictMode>,

@@ -1,15 +1,81 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ECLYRA</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+Samaritan&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playwrite+HR+Lijeva:wght@100..400&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ECLYRA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+Samaritan&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playwrite+HR+Lijeva:wght@100..400&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+  <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+  <df-messenger location="us-central1" project-id="eclyra" agent-id="ae90a0f6-ffcf-4c33-8304-eaae122fd77b"
+    language-code="en" max-query-length="-1">
+    <df-messenger-chat-bubble chat-title="ScapBot">
+    </df-messenger-chat-bubble>
+  </df-messenger>
+  <style>
+    df-messenger {
+      z-index: 999;
+      position: fixed;
+      --df-messenger-font-color: #080000;
+      --df-messenger-font-family: "Google Sans", sans-serif;
+      --df-messenger-font-size: 16px;
+      --df-messenger-chat-background: #01220c;
+      --df-messenger-message-user-background: #087d1e;
+      --df-messenger-message-bot-background: #31b41a;
+      --df-messenger-button-titlebar-color: #087d1e;
+      --df-messenger-chat-border-radius: 10px;
+      bottom: 20px;
+      right: 20px;
+      width: 400px; /* Increased chat width */
+      height: 500px; /* Increased chat height */
+    }
+  
+    /* Chat bubble styling */
+    df-messenger-chat-bubble {
+      position: fixed;
+      bottom: 20px;  /* Positioning at bottom */
+      right: 20px;   /* Positioning at right */
+      background: #087d1e !important; /* Green background */
+      border-radius: 20%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+  
+    /* Replace default chatbot icon with a custom robot */
+    df-messenger-chat-bubble::before {
+      content: "";
+      background-image: url("/robot.png")  no-repeat center;
+      background-size: 75%;
+      width: 20px;
+      height: 20px;
+      display: block;
+    }
+  
+    /* Increase chat window size */
+    df-messenger [df-messenger-chat] {
+      width: 400px !important; /* Chat width */
+      height: 500px !important; /* Chat height */
+      border-radius: 12px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+  
+  
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
