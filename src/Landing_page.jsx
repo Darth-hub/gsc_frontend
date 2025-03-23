@@ -20,11 +20,12 @@ import BlogPage from './Pages/BlogsPage.jsx';
 import TermsCondition from './Pages/TermsCondition.jsx'
 import Chatbot from './Pages/Chatbot.jsx'
 import Expandedblogs from '../Components/Expandedblogs.jsx';
+import Authentication from './Pages/Authentication.jsx';
+
 
 const Landing_Page = () => {
   return (
     <>
-
     <Home />
     <Line />
     <Blogs />

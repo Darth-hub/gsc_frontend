@@ -6,8 +6,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import cloud from "./images/Cloud.png"
 import Header from './Header';
-import { Link } from "react-router-dom";
-
+import { HashLink as Link } from "react-router-hash-link";
 
 
 const Home = () => {
@@ -18,7 +17,9 @@ const Home = () => {
       <Header />
       </div>
       <div>
+      <Link smooth to="/login">
       <button class="button px-3 py-1 mr-10 rounded-lg justify-self-end mt-6"><p class="text">login/sign up</p></button>
+      </Link>
       </div>
     </div>
     <div className='flex gap-35 mt-8 text-white'>
