@@ -24,7 +24,6 @@ import { View } from 'lucide-react';
 function App() {
   return (
     <>    
-
     <Routes>
       <Route path='/' element={<Landing_Page />} />
     </Routes>

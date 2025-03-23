@@ -13,7 +13,7 @@ const Header = () => {
       <nav className='flex  items-end w-full pl-8 '>
       <Link smooth to="/">
       <div class="flex items-end  justify-around gap-9">
-            <img src={eclyralogo} className='h-[3.5rem] ' />
+            <img src={eclyralogo} className='h-[3.5rem]'/>
             <h1 className='text-3xl'>ECLYRA</h1>
         </div></Link>
         <div className='ml-30  text-[0.9em] flex gap-30 text-semibold'>
@@ -21,8 +21,7 @@ const Header = () => {
             <Link smooth to="/store">STORE</Link>
             <Link smooth to="/blogs">BLOGS</Link>
             <Link smooth to="/community">JOIN COMMUNITY</Link>
-            {user.role === 'Seller' && <Link smooth to="/User">MY PROFILE</Link>}
-            
+            {user === 'Seller' && <Link smooth to="/User">MY PROFILE</Link>}
         </div>
       </nav>
 

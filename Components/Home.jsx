@@ -30,7 +30,7 @@ const Home = () => {
             <p>At ECLYRA, we simplify waste management by connecting you with reliable recycling solutions. Dispose of e-waste, plastics, metals, and paper responsibly—reducing pollution for a greener future. .</p>
           </div>
           
-          {user.role === 'Seller' ? (
+          {user === 'Seller' ? (
             <Link smooth to='/schedulepickup'>
               <button className='button rounded-xl mt-15 py-3 self-end mr-5 w-[60%]'>
                 Schedule Pickup Now

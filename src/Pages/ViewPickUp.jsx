@@ -294,7 +294,7 @@ const ViewPickUp = () => {
     <div className="ViewPickUp text-white flex flex-col item-baseline pb-[5vh] pl-[5vw] pr-[5vw] w-full">
       <Drawer
         styles={{
-          content: { backgroundColor: '#2b421c', color: 'white' },
+          content: { backgroundColor: '#16a34a', color: 'white' },
         }}
         opened={opened}
         onClose={close}
