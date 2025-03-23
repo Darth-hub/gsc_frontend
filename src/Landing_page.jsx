@@ -18,6 +18,10 @@ import Join_community from './Pages/User/Join_community'
 import Store from './Pages/StorePage.jsx';
 import BlogPage from './Pages/BlogsPage.jsx';
 import TermsCondition from './Pages/TermsCondition.jsx'
+import Chatbot from './Pages/Chatbot.jsx'
+import Expandedblogs from '../Components/Expandedblogs.jsx';
+import Authentication from './Pages/Authentication.jsx';
+
 
 const Landing_Page = () => {
   return (
@@ -30,9 +34,9 @@ const Landing_Page = () => {
     <Campaign />
     <Customer_Review />
     <How_We_Work />
-    <BlogPage />
-    <TermsCondition />
     <Footer />
+    {/* <Chatbot />
+     */}
     </>
   )
 }

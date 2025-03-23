@@ -1,252 +1,35 @@
-import {
-    Anchor,
-    Button,
-    Checkbox,
-    Divider,
-    Group,
-    Paper,
-    PasswordInput,
-    Stack,
-    Text,
-    TextInput,
-    Chip,
-    Loader,
-  } from '@mantine/core'
-  import { useForm } from '@mantine/form'
-  import { upperFirst, useToggle } from '@mantine/hooks'
-  import GoogleButton from './GoogleButton'
-  import { notifications } from '@mantine/notifications'
-  import TwitterButton from './TwitterButton'
-  import axios from 'axios'
-  import { app } from '../src/firebase/firebase.config.js'
-  import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth"
-  import { useEffect, useState } from 'react'
-  import { useNavigate } from 'react-router-dom'
-const auth = getAuth(app)
-const provider = new GoogleAuthProvider()
-   
-export default function AuthenticationForm() {
-    const navigate = useNavigate()
-    const [type, toggle] = useToggle(['login', 'register']);    
-    const [role, setRole] = useState('Seller')
-    const [pressed, setPressed] = useState(false)
-    const form = useForm({
-      initialValues: {
-        email: '',
-        name: '',
-        password: '',
-        terms: true,
-      },
-  
-      validate: {
-        email: (val) => (/^\S+@\S+$/.test(val) ? null : 'Invalid email'),
-        password: (val) => (val.length <= 6 ? 'Password should include at least 6 characters' : null),
-      },
-    }); 
-  
-    const signupUser = async() => {
-      const api = 'http://localhost:4000/gdsc/v1/registeruser'
-      try{
-        setPressed(true)
-        const res = await axios.post(api,{
-          name: form.values.name,
-          email: form.values.email,
-          password: form.values.password,
-          role,
-        })
-        notifications.show({
-          color: 'green',
-          title: 'Registration Successfull!',
-          message: 'Please Login to continue'
-        })
-        setPressed(false)
-      }catch(error){
-        setPressed(false)
-        console.log(error);
-        notifications.show({
-          color: 'red',
-          title: 'Registration failed!',
-          message: error.message,
-        })
-      }
-    }
+import React from 'react';
+import { Button } from '@mantine/core';
 
-    const loginUser = async () => {
-      try {
-        setPressed(true)
-        const userCredential = await signInWithEmailAndPassword(auth, form.values.email, form.values.password); 
-        notifications.show({
-          color: 'green',
-          title: 'Welcome Back',
-          message: 'Your session is live now'
-        })
-        setPressed(false)
-        navigate('/home')
-        // redirect
-      } catch (error) {
-        setPressed(false)
-        console.log(error)
-        notifications.show({
-          color: 'red',
-          title: 'Login failed!',
-          message: "Invalid email or password",
-        })
-      }
-    };
+function GoogleIcon(props) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="xMidYMid"
+      viewBox="0 0 256 262"
+      style={{ width: 14, height: 14 }}
+      {...props}
+    >
+      <path
+        fill="#4285F4"
+        d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027"
+      />
+      <path
+        fill="#34A853"
+        d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1"
+      />
+      <path
+        fill="#FBBC05"
+        d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782"
+      />
+      <path
+        fill="#EB4335"
+        d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251"
+      />
+    </svg>
+  );
+}
 
-    const googleUser = async() => {
-      try{
-        setPressed(true)
-        const result = await signInWithPopup(auth, provider)
-
-        if(type === 'login'){
-          notifications.show({
-            color: 'green',
-            title: 'LogedIn Successfully',
-            message: 'Your session is live now'
-          })          
-        }else{
-          notifications.show({
-            color: 'green',
-            title: 'Registered Successfully',
-            message: 'Your session is live now'
-          })
-        }
-        setPressed(false)
-        // redirect
-      }catch(error){
-        setPressed(false)
-        console.error(error)
-
-        if(type === 'login'){
-          notifications.show({
-            color: 'red',
-            title: 'Login failed!',
-            message: error.message,
-          })          
-        }else{
-          notifications.show({
-            color: 'red',
-            title: 'SignUp failed!',
-            message: error.message,
-          })
-        }
-      }
-    }
-
-    
-
-    return (
-      <Paper bg='#388E3C' radius="md" p="xl" w={500}>
-        <Text size="lg" color='black' fw={500}>
-          Welcome to Eclyra, {type} with
-        </Text>
-  
-        <Group grow mb="md" mt="md">
-          <GoogleButton onClick={googleUser} radius="xl">Google</GoogleButton>
-          <TwitterButton radius="xl">Twitter</TwitterButton>
-        </Group>
-  
-        <Divider style={{color : 'black'}} styles={{ label: { color: "black" }}} label="Or continue with email" labelPosition="center" my="lg" />
-  
-        <form onSubmit={form.onSubmit(() => {type === 'login' ? loginUser() : signupUser()})}>
-          <Stack>
-            {type === 'register' && (
-              <TextInput
-                label="Name"
-                placeholder="Your name"
-                value={form.values.name}
-                onChange={(event) => form.setFieldValue('name', event.currentTarget.value)}
-                radius="md"
-                styles={{ label: { color: "black" }}}
-              />
-            )}
-  
-            <TextInput
-              required
-              label="Email"
-              placeholder="Eclyra@gmail.com"
-              value={form.values.email}
-              onChange={(event) => form.setFieldValue('email', event.currentTarget.value)}
-              error={form.errors.email && 'Invalid email'}
-              radius="md"
-              styles={{ label: { color: "black" } }}
-            />
-  
-            <PasswordInput
-              required
-              label="Password"
-              placeholder="Your password"
-              value={form.values.password}
-              onChange={(event) => form.setFieldValue('password', event.currentTarget.value)}
-              error={form.errors.password && 'Password should include at least 6 characters'}
-              radius="md"
-              styles={{ label: { color: "black" } }}
-
-            />
-  
-            {type === 'register' && (
-              <div>
-                <div className='border border-white rounded-md pt-[1vh] pl-[2vw] pb-[2vh] mb-[2vh] mt-[2vh] mb-[2vh]'>
-                  <p className='text-white text-md pb-[1vh]'>What are you interested in?</p>
-                  <Chip.Group>
-                    <Group 
-                      align="left"
-                      sx={{
-                        flexDirection: "column",
-                        gap: "4px", // Reduce gap between chips
-                      }}
-                    >
-                      <Chip
-                        value="1"
-                        radius="md"
-                        checked={role === 'Seller' ? true : false}
-                        onClick={(event) => setRole('Seller')}
-                        defaultChecked color="#171717"
-                      >
-                        Selling scrap
-                      </Chip>
-
-                      <Chip
-                        value="2"
-                        radius="md"
-                        checked={role === 'Dealer' ? true : false}
-                        onClick={(event) => setRole('Dealer')}
-                        defaultChecked color="#171717"
-                      >
-                        Buying scrap
-                      </Chip>
-                    </Group>
-                  </Chip.Group>
-                </div>
-
-                <Checkbox
-                  label="I accept terms and conditions"
-                  checked={form.values.terms}
-                  defaultChecked color='#171717'
-                  onChange={(event) => form.setFieldValue('terms', event.currentTarget.checked)}
-                />
-              </div>
-            )}
-          </Stack>
-  
-          <Group justify="space-between" mt="xl">
-            <Anchor component="button" type="button" c="black" onClick={() => toggle()} size="xs">
-              {type === 'register'
-                ? 'Already have an account? Login'
-                : "Don't have an account? Register"}
-            </Anchor>
-            <div className='flex items-center'>
-              {
-                pressed ? <Loader color='green' mr='lg'  size={20}/> : null
-              }
-              <Button disabled={pressed} className='button' bg='#171717'  type="submit" radius="xl">
-                {upperFirst(type)}
-              </Button>
-            </div>
-
-          </Group>
-        </form>
-      </Paper>
-    );
-  }
+export default function GoogleButton(props) {
+    return <Button bg='#171717'style={{color: 'white'}} leftSection={<GoogleIcon />} variant="default" {...props} />;
+}

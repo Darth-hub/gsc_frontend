@@ -16,19 +16,13 @@ const Blogs = () => {
       };
 
   return (
-    <div class="Blog w-full h-[100vh] text-white    ">
-        <div className='text-center text-5xl pt-8'>
+    <div class="Blog w-full h-[100vh]   ">
+        <div className='text-center text-white text-5xl pt-8'>
             <h1>BLOGS</h1>
         </div>
 
-        <div className='h-[75%] w-[95%] pt-15 mx-auto'>
-            <Slider {...settings}>
-            <Cards />
-            <Cards />
-            <Cards />
-            <Cards />
-            <Cards />
-            </Slider>
+        <div className='w-[98vw] h-[500px] mt-20'>
+        <Cards />
         </div>
     </div>
   )

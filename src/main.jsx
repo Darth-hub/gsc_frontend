@@ -7,9 +7,10 @@ import '@mantine/core/styles.css';
 import { createTheme, MantineProvider } from '@mantine/core';
 import Header from '../Components/Header.jsx'
 import { DataProvider } from './Context/DataContext.jsx';
-import { AuthProvider } from './Context/AuthContext.jsx';
-import { MantineProvider } from '@mantine/core';
+// import { AuthProvider } from './Context/AuthContext.jsx';
 import '@mantine/core/styles.css';
+import { Notifications } from '@mantine/notifications';
+import { BlogProvider } from './Pages/User/Blogdata.jsx';
 
 
 createRoot(document.getElementById('root')).render(
@@ -17,10 +18,12 @@ createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <MantineProvider>
         <Notifications />
-          <AuthProvider>
-            <Header />
-            <App />
-          </AuthProvider>
+          {/* <AuthProvider> */}
+          <BlogProvider>
+          <App />
+          </BlogProvider>
+            
+          {/* </AuthProvider> */}
       </MantineProvider>
     </BrowserRouter>
   </StrictMode>,
