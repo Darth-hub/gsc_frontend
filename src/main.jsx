@@ -12,6 +12,7 @@ import '@mantine/core/styles.css';
 import { Notifications } from '@mantine/notifications';
 import { BlogProvider } from './Pages/User/Blogdata.jsx';
 import { CommunityDataProvider } from './Pages/Communitydata.jsx';
+import { WorkProvider } from './Pages/WorkContext.jsx';
 
 
 createRoot(document.getElementById('root')).render(
@@ -22,9 +23,11 @@ createRoot(document.getElementById('root')).render(
           <AuthProvider>
             <DataProvider>
             <BlogProvider>
+              <WorkProvider>
               <CommunityDataProvider>
               <App />
               </CommunityDataProvider>
+              </WorkProvider>
             </BlogProvider>
             </DataProvider>
           </AuthProvider>

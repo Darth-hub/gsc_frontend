@@ -57,13 +57,20 @@
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 
-  <!-- Dialogflow Chatbot -->
+  <!-- Dialogflow Chatbot with Custom Attributes -->
   <df-messenger
     location="us-central1"
     project-id="eclyra"
     agent-id="ae90a0f6-ffcf-4c33-8304-eaae122fd77b"
     language-code="en">
-    <df-messenger-chat-bubble chat-title="ScrapBot"></df-messenger-chat-bubble>
+    <df-messenger-chat-bubble
+      chat-title="ScrapBot"
+      chat-subtitle="Eco-friendly recycling assistant"
+      chat-icon="../../Components/images/robot.png"
+      placeholder-text="Ask about recycling..."
+      bot-actor-image="../../Components/images/robot.png"
+      user-actor-image="../../Components/images/profilepic.png">
+    </df-messenger-chat-bubble>
   </df-messenger>
 </body>
 </html>
