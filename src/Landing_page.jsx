@@ -39,13 +39,14 @@ const Landing_Page = () => {
     return () => clearTimeout(timer); // Cleanup timer
   }, []);
 
-  if (isPageLoading) {
+  if (isPageLoading || loading) {
     return (
       <div className='flex justify-center items-center h-screen'>
         <Loader size="lg" />
       </div>
     );
   }
+
 
   return (
     <>

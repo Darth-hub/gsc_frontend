@@ -7,6 +7,8 @@ import "slick-carousel/slick/slick-theme.css";
 import { useEffect, useState, useContext} from 'react';
 import { Title } from '@mantine/core';
 import { DataContext } from '../Context/DataContext.jsx';
+import HeroBanner from '../../Components/HeroBanner.jsx';
+import CarbonFootprintMeter from '../../Components/Carbon.jsx';
 
 
 const ViewIndustries = () => {
@@ -37,13 +39,16 @@ const ViewIndustries = () => {
             <div className='text-center text-white text-5xl pt-8 mb-10'>
                 <Title>Our Industrial Partners</Title>
             </div>
+         
 
-            <div className='w-[70vw] mt-10 ml-[5vw]'>
-              <MultiMap locations={locations}/>
+            <div className='w-[95vw] mt-10 ml-7'>
+              <MultiMap locations={locations }/>
             </div>
             <div className='text-white text-xl pl-10 pt-10 ml-[1vw]'></div>
+            <CarbonFootprintMeter>
 
-            <div className='w-[87vw] bg-green-700 ml-[5vw] mr-[5vw] h-fit overflow-y-auto scrollbar-hide p-[2vw] rounded-md'>
+            </CarbonFootprintMeter>
+            <div className='w-[95vw] bg-green-700  h-fit overflow-y-auto scrollbar-hide p-[2vw] rounded-md ml-7'>
               <div className="p-[1vw] text-white bg-zinc-900 backdrop-blur-lg text-xl mb-4 rounded md">Selling Options</div>
               <div className='overflow-x-auto rounded-md overflow-y-hidden flex scrollbar-hide'>
                       {data.map((industry) => (

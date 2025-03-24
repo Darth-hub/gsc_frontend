@@ -316,3 +316,18 @@
     height: 60%; /* Adjust the size of the image */
     border-radius: 10%; /* Make the image round */
   }
+
+
+
+
+
+
+  --df-messenger-font-color: #080000;
+  --df-messenger-font-family: "Google Sans", sans-serif;
+  --df-messenger-font-size: 16px;
+  --df-messenger-chat-background: #002801;
+  --df-messenger-message-user-background: #038680;
+  --df-messenger-message-bot-background: #31b41a;
+  --df-messenger-button-titlebar-color: #087d1e;
+  --df-messenger-chat-border-radius: 10px;
+  width: 80%;  

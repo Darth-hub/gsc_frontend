@@ -4,6 +4,7 @@ import { Autocomplete, Loader, TextInput, Anchor, Box, Button, Text, Title } fro
 import { useForm } from "@mantine/form";
 import { useAuth } from '../src/Context/AuthContext'
 import { notifications } from "@mantine/notifications";
+import { useNavigate } from "react-router-dom";
 
 
 const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY; // Replace with your actual API key
@@ -50,6 +51,8 @@ export function PickUpForm({getData}) {
     const currentLocation = useRef(null)
     const address = useRef(null)
     const [pressed, setPressed] = useState(false)
+
+    const navigate = useNavigate()
 
     const form = useForm({
         initialValues: {
@@ -290,11 +293,13 @@ export function PickUpForm({getData}) {
             }
 
             const response = await axios.post(url,data)
+
             notifications.show({
                 color: 'green',
                 title: 'Order Placed',
                 message: 'keep tone for our response'
             })
+            navigate('/')
             setPressed(false)
         }catch(error){  
             console.error(error)
