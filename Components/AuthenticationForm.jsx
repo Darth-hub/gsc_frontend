@@ -106,13 +106,15 @@ export default function AuthenticationForm() {
             color: 'green',
             title: 'LogedIn Successfully',
             message: 'Your session is live now'
-          })          
+          })    
+          navigate('/')      
         }else{
           notifications.show({
-            color: 'green',
-            title: 'Registered Successfully',
-            message: 'Your session is live now'
+            color: 'red',
+            title: 'Registered UnSuccessfully',
+            message: 'Please try again later'
           })
+          navigate('/')      
         }
         setPressed(false)
       }catch(error){

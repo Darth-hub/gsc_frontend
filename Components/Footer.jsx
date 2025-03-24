@@ -42,7 +42,7 @@ const Footer = () => {
 
         <div className='w-[50%] flex h-full mr-15 '>
             <div className='w-[30%]   h-full  p-5 py-15'>
-                <h1 className='text-lg  mb-3 underline'> Quick Link's</h1>
+                <h1 className='text-lg  mb-3 underline'> Quick Links</h1>
                 <div className=' flex flex-col gap-1'>
                 <Link smooth to="/" className='hover:translate-x-2 duration-300 ease-in'><span >Home</span></Link>
                 <Link smooth to="/contact" className='hover:translate-x-2 duration-300 ease-in'><span >Contact</span></Link>

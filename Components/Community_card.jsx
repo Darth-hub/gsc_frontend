@@ -1,26 +1,45 @@
-import React from 'react'
-import { HashLink as Link } from "react-router-hash-link";
+import React from "react";
+import { Link } from "react-router-dom"; // Use Link for navigation
+import { useCommunityData } from "../src/Pages/Communitydata"; // Import the context hook
 
 const Community_card = () => {
+  const { communities } = useCommunityData(); // Fetch community data
+
   return (
-    <>
-    <div className='w-[30%] relative aspect-video bg-gray-100 text-black p-2 rounded'>
-        <div className='h-[70%] object-contain  overflow-hidden'>
-            <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZSUyMHdhc3RlfGVufDB8fDB8fHww" className='relative -top-5 '  alt="" />
-        </div>
-        <div className='mt-2 text-[#277868]'>
-            <h1>Prayagraj, IIIT Allahabad</h1>
-            <span>2k members</span>
-        </div>
-        <div>
-        <Link smooth to="/Join_community">
-        <button class='bg-[#277868] duration-150 ease-linear hover:scale-[1.1] text-amber-50 cursor-pointer absolute right-3 bottom-1 rounded w-[35%] '><p class="text"><span className='text-[0.9em] text-center'>View Details</span></p></button>
-        </Link>
-        </div>
+    <div className="flex flex-wrap gap-6 justify-center">
+      {communities.map((community, index) => (
+        <div
+          key={index}
+          className="w-[30%] relative aspect-video bg-gray-700 text-black p-2 rounded shadow-lg"
+        >
+          {/* Image Section */}
+          <div className="h-[70%] object-contain overflow-hidden">
+            <img
+              src={community.imgPosts[0]} // Dynamically fetching image
+              className="relative -top-5 w-full h-full object-cover"
+              alt={community.name}
+            />
+          </div>
 
+          {/* Community Info */}
+          <div className="mt-2 text-white">
+            <h1 className="text-lg">{community.name}</h1>
+            <p className="text-sm">{community.location}</p>
+            <span className="text-xs">{community.members} members</span>
+          </div>
+
+          {/* View Details Button */}
+          <div>
+            <Link to={`/community/${community.name.toLowerCase().replace(/\s/g, "-")}`}>
+              <button className="bg-[#277868] duration-150 ease-linear hover:scale-[1.1] text-amber-50 cursor-pointer absolute right-3 bottom-1 rounded w-[35%] p-1">
+                <p className="text-center text-[0.9em]">View Details</p>
+              </button>
+            </Link>
+          </div>
+        </div>
+      ))}
     </div>
-    </>
-  )
-}
+  );
+};
 
-export default Community_card
+export default Community_card;

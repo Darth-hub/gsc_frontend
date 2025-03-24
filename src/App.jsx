@@ -34,7 +34,7 @@ function App() {
 
     <Routes>
       <Route path='/community' element={<Community />} />
-      <Route path='/Join_community' element={<Join_community />} />
+      <Route path="/community/:communityName" element={<Join_community />} />
       <Route path='/User' element={<User_profile />} />
       <Route path='/scrap_rate' element={<ScrapRate />} />
       <Route path='/contact' element={<ContactUs />} />

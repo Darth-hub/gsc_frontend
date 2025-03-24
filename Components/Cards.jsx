@@ -8,17 +8,17 @@ import "../src/App.css";
 import { Link } from "react-router-dom";
 import { BlogContext } from "../src/Pages/User/Blogdata";
 
+
 const Cards = () => {
   const { blogs } = useContext(BlogContext);
 
   return (
-    <div className="h-[400px] flex">
+    <div className="h-auto flex">
       <Swiper 
       modules={[Navigation, Pagination, Autoplay]}
       spaceBetween={20}
       slidesPerView={1}
-      navigation
-      pagination={{ clickable: true }}
+      
       autoplay={{ delay: 3000 }}
       breakpoints={{
         640: { slidesPerView: 1 },
@@ -32,8 +32,8 @@ const Cards = () => {
             <Link smooth to={`/blog`} state={{blog}}> {/* Pass blog data as state */}
               <button className="card h-[55vh] flex text-center w-[30vw] py-5 rounded-2xl shadow-lg bg-white">
                 <div className="p-4">
-                  <p className="header text-3xl text-center font-semibold">{blog.title}</p>
-                  <p className="text-m mt-2">{blog.description.substring(0, 300)}...</p>
+                  <p className="header text-3xl text-center font-semibold">{blog.title.substring(0,50)}...</p>
+                  <p className="text-m mt-2 ">{blog.description.substring(0, 200)}...</p>
                 </div>
                 <div className="footer text-sm mt-4">
                   by {blog.author.name} on {blog.author.date}

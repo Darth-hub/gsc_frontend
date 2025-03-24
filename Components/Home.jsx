@@ -4,9 +4,21 @@ import Header from './Header';
 import { HashLink as Link } from "react-router-hash-link";
 import { useAuth } from '../src/Context/AuthContext';
 import { Loader } from '@mantine/core';
+import { auth } from '../src/firebase/firebase.Config';
+import { signOut } from 'firebase/auth';
+import { connectFirestoreEmulator } from 'firebase/firestore';
 
 const Home = () => {
   const { user } = useAuth();
+  console.log(user)
+
+  const logoutUser = async () => {
+    try {
+      await signOut(auth);
+    } catch (error) {
+      console.error("Error logging out:", error.message);
+    }
+  };
 
   return (
     <>
@@ -15,11 +27,18 @@ const Home = () => {
           <Header />
         </div>
         <div>
-          <Link smooth to="/login">
-            <button className="button px-3 py-1 mr-10 rounded-lg mt-6">
-              <p className="text">login/sign up</p>
-            </button>
-          </Link>
+          {
+            user ? 
+            <button className="button px-3 py-1 mr-10 rounded-lg mt-6" onClick={logoutUser}>
+              <p className="text">Logout</p>
+            </button> :           
+            <Link smooth to="/login">
+              <button className="button px-3 py-1 mr-10 rounded-lg mt-6">
+                <p className="text">login/sign up</p>
+              </button>
+            </Link> 
+          }
+
         </div>
       </div>
       <div className='flex gap-35 mt-8 text-white'>
