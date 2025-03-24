@@ -31,26 +31,37 @@ const Home = () => {
 
           </div>
           
-          {user.role === 'Seller' ? (
-            <Link smooth to='/schedulepickup'>
-              <button className='button rounded-xl mt-15 py-3 self-end mr-5 w-[60%]'>
-                Schedule Pickup Now
-              </button>
-            </Link>
-          ) : (
+          {
+            user ? 
             <div>
-              <Link smooth to='/viewPickUps'>
+              {user.role === 'Seller' ? (
+              <Link smooth to='/schedulepickup'>
                 <button className='button rounded-xl mt-15 py-3 self-end mr-5 w-[60%]'>
-                  PickUps
+                  Schedule Pickup Now
                 </button>
               </Link>
-              <Link smooth to='/viewindustries'>
+            ) : (
+              <div>
+                <Link smooth to='/viewPickUps'>
+                  <button className='button rounded-xl mt-15 py-3 self-end mr-5 w-[60%]'>
+                    PickUps
+                  </button>
+                </Link>
+                <Link smooth to='/viewindustries'>
+                  <button className='button rounded-xl mt-15 py-3 self-end mr-5 w-[60%]'>
+                    Sell To Industries
+                  </button>
+                </Link>
+              </div>
+            )} 
+              </div>          : 
+
+              <Link smooth to='/login'>
                 <button className='button rounded-xl mt-15 py-3 self-end mr-5 w-[60%]'>
-                  Sell To Industries
+                  Get Started
                 </button>
               </Link>
-            </div>
-          )}
+          }
         </div>
         <div className='relative flex justify-center items-center aspect-square'>
           <img src={logo} className='h-[75vh]' alt="ECLYRA Logo" />

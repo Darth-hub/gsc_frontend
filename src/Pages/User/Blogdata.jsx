@@ -12,6 +12,7 @@ const BlogProvider = ({ children }) => {
         "category": "Waste Renewal",
         "title": "The Future of Waste Renewal: Turning Trash into Treasure",
         "description": "Waste renewal is the process of converting waste materials into reusable products. This blog explores innovative technologies like pyrolysis and anaerobic digestion that are revolutionizing waste management. Learn how waste renewal can reduce landfill dependency, create renewable energy, and contribute to a circular economy.",
+        "content": "Waste renewal is more than just recycling—it's about transforming waste into valuable resources. Technologies like pyrolysis convert plastic waste into fuel, reducing landfill waste and dependence on fossil fuels. Anaerobic digestion, on the other hand, uses organic waste to generate biogas, a renewable energy source. These innovations not only help the environment but also create economic opportunities by turning waste into marketable products. With growing environmental concerns, industries are investing in sustainable waste management strategies. The future of waste renewal lies in technological advancements, community participation, and government policies promoting a circular economy.",
         "image": "../../Components/images/renewal.png",
         "author": {
           "name": "Ayush Ranjan",

@@ -63,6 +63,7 @@ export default function BlogPage() {
                   title={blog.title}
                   description={blog.description}
                   image={blog.image}
+                  content = {blog.content}
                   author={blog.author}
                 />
               </Link>
@@ -77,7 +78,8 @@ export default function BlogPage() {
 
 function BlogCard({ category, title, description, image, author }) {
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full transform transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer">
+    <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full transform transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer pt-3">
+
       <div className="relative h-48 w-full">
         <img
           src={image || "/placeholder.svg"}

@@ -29,7 +29,7 @@ const Join_community = () => {
         </div>
         <div className='flex gap-8'>
           <div>
-            <button className='bg-white text-[#277868] rounded-xl px-2 py-1 font-semibold text-[0.80em]'>Community Chat</button>
+            <button className='bg-white text-[#277868] rounded-xl px-2 py-1 font-semibold text-[0.80em]'><Link smooth to="/CommunityChat">Community Chat</Link></button>
           </div>
           <div>
             <button className='bg-white text-[#277868] rounded-xl px-2 py-1 font-semibold text-[0.80em]'>Reviews</button>

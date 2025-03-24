@@ -6,7 +6,7 @@ import Footer from '../Components/Footer';
 import StorePage from './Pages/StorePage';
 import ContactUs from './Pages/ContactUs';
 import TermsCondition from './Pages/TermsCondition.jsx'; 
-import Landing_Page from './Landing_Page';
+import Landing_Page from './Landing_page';
 import Community from './Pages/Community.jsx';
 import Join_community from './Pages/User/Join_community.jsx';
 import User_dashboard from './Pages/User/User_dashboard.jsx';
@@ -19,6 +19,8 @@ import  ViewPickUp from './Pages/ViewPickUp.jsx'
 import SellToIndustries from './Pages/SellToIndustries.jsx'
 import ViewIndustries from './Pages/ViewIndustries.jsx';
 import { View } from 'lucide-react';
+import CommunityChat from './Pages/CommunityChat.jsx'
+
 
 
 function App() {
@@ -44,6 +46,9 @@ function App() {
       <Route path='/viewPickUps' element={<ViewPickUp/>} />
       <Route path='/viewindustries' element={<ViewIndustries/>} />
       <Route path='selltoindustries/:id' element={<SellToIndustries/>} />
+      <Route path= '/CommunityChat' element={<CommunityChat/>} />
+      
+      
     </Routes>
     
     </>
