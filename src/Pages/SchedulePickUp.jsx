@@ -3,6 +3,8 @@ import PickUpForm from '../../Components/PickUpForm'
 import { Text } from '@mantine/core'
 import { useAuth } from '../Context/AuthContext'
 import LoginToContinue from './LoginToContinue'
+import Header from '../../Components/Header'
+import Footer from '../../Components/Footer'
 
 const SchedulePickUp = () => {
   const user = useAuth()
@@ -10,6 +12,10 @@ const SchedulePickUp = () => {
 
   if(user){
     return (
+      <>
+      <div>
+        <Header />
+      </div>
       <div className='h-screen flex'>
           <div className='w-[60vw] p-20'>
           <h1 className="title text-white">
@@ -28,6 +34,10 @@ const SchedulePickUp = () => {
               <PickUpForm />
           </div>
       </div>
+      <div>
+        <Footer />
+      </div>
+      </>
     )
   }else{
     return(

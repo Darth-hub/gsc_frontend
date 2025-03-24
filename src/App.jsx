@@ -18,7 +18,6 @@ import User_profile from './Pages/User/User_profile.jsx';
 import  ViewPickUp from './Pages/ViewPickUp.jsx'
 import SellToIndustries from './Pages/SellToIndustries.jsx'
 import ViewIndustries from './Pages/ViewIndustries.jsx';
-import { View } from 'lucide-react';
 
 
 function App() {

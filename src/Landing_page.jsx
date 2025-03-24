@@ -49,7 +49,6 @@ const Landing_Page = () => {
 
   return (
     <>
-    <User_profile />
     <Home />
     <Line />
     <Blogs />

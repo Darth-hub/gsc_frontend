@@ -5,9 +5,14 @@ import insta from "../Components/images/instagram.png"
 import twitter from "../Components/images/twitter.png"
 import Subscribe from './Subscribe'
 import { HashLink as Link } from "react-router-hash-link";
+import Gmail from '../Components/images/gmail.png';
+import './Component.css';
 
 
 const Footer = () => {
+
+
+
   return (
     <div id="contact" className='w-full text-white flex justify-between  h-[45vh] bg-[#222C1D]'>
 
@@ -45,15 +50,18 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className=' w-[70%] flex flex-col gap-2 py-15 h-full  px-10'>
-                <h1 className='text-lg underline'>For Every Update.</h1>
+            <div className="w-[70%] flex flex-col gap-2 py-15 h-full px-10">
+                <h1 className="text-lg underline">For Every Update.</h1>
+    
                 <Subscribe />
-            </div>
+    </div>
+</div>
+
 
         </div>
         
 
-    </div>
+   
   )
 }
 

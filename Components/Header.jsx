@@ -21,7 +21,7 @@ const Header = () => {
             <Link smooth to="/store">STORE</Link>
             <Link smooth to="/blogs">BLOGS</Link>
             <Link smooth to="/community">JOIN COMMUNITY</Link>
-            {user === 'Seller' && <Link smooth to="/User">MY PROFILE</Link>}
+            {user.role === 'Seller' && <Link smooth to="/User">MY PROFILE</Link>}
             
         </div>
       </nav>
