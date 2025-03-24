@@ -106,7 +106,7 @@ function BlogCard({ category, title, description, image, author }) {
             />
           </svg>
         </h3>
-        <p className="mt-2 text-sm text-gray-600 flex-grow">{description}</p>
+        <div className="h-[150px] overflow-hidden "><p className="mt-2 text-sm text-gray-600 flex-grow">{description}</p></div>
         <div className="mt-4 flex items-center">
           <div className="ml-3">
             <p className="text-sm font-medium text-gray-900">{author.name}</p>

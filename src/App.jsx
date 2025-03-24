@@ -6,7 +6,6 @@ import Footer from '../Components/Footer';
 import StorePage from './Pages/StorePage';
 import ContactUs from './Pages/ContactUs';
 import TermsCondition from './Pages/TermsCondition.jsx'; 
-import Landing_Page from './Landing_page';
 import Community from './Pages/Community.jsx';
 import Join_community from './Pages/User/Join_community.jsx';
 import User_dashboard from './Pages/User/User_dashboard.jsx';
@@ -20,6 +19,8 @@ import SellToIndustries from './Pages/SellToIndustries.jsx'
 import ViewIndustries from './Pages/ViewIndustries.jsx';
 import { View } from 'lucide-react';
 import CommunityChat from './Pages/CommunityChat.jsx'
+import Landing_Page from './Landing_Page.jsx';
+
 
 
 
