@@ -1,9 +1,5 @@
 import { createContext, useState } from "react";
-
-
 const BlogContext = createContext(null);
-
-
 const BlogProvider = ({ children }) => {
 
     const [blogs] = useState([

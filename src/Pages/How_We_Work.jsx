@@ -1,14 +1,15 @@
 import React from 'react';
 import Work_Card from '../../Components/Work_Card';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
+
+
 
 const How_We_Work = () => {
+    
     var settings = {
         dots: true,
         infinite: true,
-        speed: 500,
+        speed: 100,
+        autoplay:true,
         slidesToShow: 1,
         slidesToScroll: 1,
     };
@@ -18,17 +19,13 @@ const How_We_Work = () => {
             <div className='flex justify-center'><hr className='w-[90vw]'></hr></div>
 
             <div>
-                <h1 className='text-5xl text-white'>About Us</h1>
+                <h1 className='text-5xl text-white'>How We Work</h1>
             </div>
 
             <div className='w-full flex justify-center flex-wrap items-start h-full'>
-                <Slider {...settings} className="w-[90%] ">
-                    <div> <Work_Card /> </div>
-                    <div> <Work_Card /> </div>
-                    <div> <Work_Card /> </div>
-                </Slider>
+                    <div> <Work_Card /> </div>  
             </div>
-        </div>
+        </div> 
     );
 };
 
