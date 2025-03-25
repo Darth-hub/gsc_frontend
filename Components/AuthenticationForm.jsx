@@ -59,7 +59,8 @@ export default function AuthenticationForm() {
         notifications.show({
           color: 'green',
           title: 'Registration Successfull!',
-          message: 'Please Login to continue'
+          message: 'Please Login to continue',
+          position: 'top-right',
         })
         setPressed(false)
       }catch(error){
@@ -69,6 +70,7 @@ export default function AuthenticationForm() {
           color: 'red',
           title: 'Registration failed!',
           message: error.message,
+          position: 'top-right',
         })
       }
     }
@@ -80,7 +82,8 @@ export default function AuthenticationForm() {
         notifications.show({
           color: 'green',
           title: 'Welcome Back',
-          message: 'Your session is live now'
+          message: 'Your session is live now',
+          position: 'top-right',
         })
         setPressed(false)
         navigate('/')
@@ -92,6 +95,7 @@ export default function AuthenticationForm() {
           color: 'red',
           title: 'Login failed!',
           message: "Invalid email or password",
+          position: 'top-right',
         })
       }
     };
@@ -105,7 +109,8 @@ export default function AuthenticationForm() {
           notifications.show({
             color: 'green',
             title: 'LogedIn Successfully',
-            message: 'Your session is live now'
+            message: 'Your session is live now',
+            position: 'top-right',
           })    
           navigate('/')      
         }else{

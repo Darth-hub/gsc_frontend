@@ -24,6 +24,7 @@ import Landing_Page from './Landing_Page.jsx';
 
 
 
+
 function App() {
   return (
     <>    
@@ -48,8 +49,6 @@ function App() {
       <Route path='/viewindustries' element={<ViewIndustries/>} />
       <Route path='selltoindustries/:id' element={<SellToIndustries/>} />
       <Route path= '/CommunityChat' element={<CommunityChat/>} />
-      
-      
     </Routes>
     
     </>

@@ -23,7 +23,7 @@ import Expandedblogs from '../Components/Expandedblogs.jsx';
 import Authentication from './Pages/Authentication.jsx';
 import { useAuth } from './Context/AuthContext.jsx';
 import Loader from '../Components/Loader.jsx';
-
+import SearchPage from './Pages/SearchPage.jsx';
 
 
 
@@ -55,6 +55,7 @@ const Landing_Page = () => {
     <Blogs />
     <HeroBanner />
     <OurPresence />
+    <SearchPage />
     <Campaign />
     <Customer_Review />
     <How_We_Work />

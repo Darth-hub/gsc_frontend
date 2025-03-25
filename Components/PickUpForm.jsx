@@ -359,7 +359,7 @@ export function PickUpForm({getData}) {
                 placeholder={!chooseLoc ? "type location" : address.current}
                 w={450}
                 styles={{
-                    dropdown: { backgroundColor: "black" }, 
+                    dropdown: { backgroundColor: "white" }, 
                     item: { color: "black" }, 
                 }}
             />

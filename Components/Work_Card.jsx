@@ -15,7 +15,7 @@ const Work_Card = () => {
         autoplaySpeed: 3000,
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: false, // Hides prev/next arrows if you only want dots
+        arrows: true, // Hides prev/next arrows if you only want dots
     };
 
     return (
@@ -34,7 +34,7 @@ const Work_Card = () => {
 
                             <div className="border-2 rounded-lg w-full text-center p-5 px-10 h-[80%]">
                                 <h1 className="text-3xl pb-10">{workItem.title}</h1>
-                                <p>{workItem.description}</p>
+                                <p className="text-xl"> {workItem.description}</p>
                             </div>
                         </div>
 
