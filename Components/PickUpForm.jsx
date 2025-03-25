@@ -5,7 +5,7 @@ import { useForm } from "@mantine/form";
 import { useAuth } from '../src/Context/AuthContext'
 import { notifications } from "@mantine/notifications";
 import { useNavigate } from "react-router-dom";
-
+import { ToastContainer, toast } from 'react-toastify';
 
 const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY; // Replace with your actual API key
 const endpoint = "https://places.googleapis.com/v1/places:autocomplete";
@@ -43,6 +43,7 @@ const indianStates = [
   ];
 
 export function PickUpForm({getData}) {
+    const notify = () => toast("Ordered !!");
     const timeoutRef = useRef(-1);
     const timeoutRefState = useRef(-1)
     const [loading, setLoading] = useState(false);
@@ -449,7 +450,7 @@ export function PickUpForm({getData}) {
         </div>
         <div className="flex justify-between">
             {/* <div></div> */}
-            <Button type="submit" disabled={pressed} className="hover:scale-[1.08] transition-all duration-200 rounded-md mt-3 p-[0.3vw] hover:outline hover:outline-[3px] outline-[#209868]" color="#1B2316"> Order </Button>
+            <Button type="submit" disabled={pressed} onClick={notify} className="hover:scale-[1.08] transition-all duration-200 rounded-md mt-3 p-[0.3vw] hover:outline hover:outline-[3px] outline-[#209868]" color="#1B2316"> Order </Button><ToastContainer />
             {/* <div></div> */}
         </div>
     </form>

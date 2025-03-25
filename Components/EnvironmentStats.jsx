@@ -63,7 +63,7 @@ export default function EnvironmentalStats() {
               {statsVisible ? "53.6 million tons" : "0%"}
             </span>
           </div>
-          <p className="text-white text-lg">E-waste generated worldwide in 2023</p>
+          <p className="text-white text-lg">E-waste generated worldwide in 2024</p>
         </div>
 
         {/* Custom Progress Bar */}
