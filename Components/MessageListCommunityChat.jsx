@@ -49,18 +49,6 @@ export function MessageList({ messages }) {
           </div>
         </div>
       ))}
-
-      {/* Typing Indicator */}
-      <div className="flex items-center text-white text-sm">
-        <div className="h-6 w-6 mr-2 rounded-full overflow-hidden">
-          <img 
-            src="../../Components/images/profilepic.png" 
-            alt="Typing user"
-            className="h-full w-full object-cover"
-          />
-        </div>
-        <span>Ayush Ranjan is typing...</span>
-      </div>
     </div>
   );
 }

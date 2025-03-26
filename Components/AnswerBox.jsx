@@ -129,7 +129,7 @@ export default function AnswerBox({ query }) {
                 </div>
               )}
               {answer && (
-                <div className="bg-white/20 p-4 rounded-lg prose prose-invert max-w-none">
+                <div className="bg-white/20 p-4 rounded-lg prose prose-invert max-w-3xl mx-auto">
                   <ReactMarkdown 
                     components={{
                       h2: ({node, ...props}) => <h2 className="text-xl font-bold text-green-300 mt-4 mb-2" {...props} />,

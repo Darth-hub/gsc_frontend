@@ -18,12 +18,15 @@ import { useRef, useState, useContext } from 'react';
 import './SellToIndustries.css';
 import { IconBlur } from '@tabler/icons-react';
 import { color } from 'framer-motion';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { DataContext } from '../Context/DataContext';
 import { Link } from 'react-router-dom';
 import { notifications } from '@mantine/notifications';
 
+
 export function SellToIndustries() {
+
+  const navigate = useNavigate();
   const [phone, setPhone] = useState('');
   const [country, setCountry] = useState('IN'); // Default country
   const { id } = useParams();
@@ -56,9 +59,13 @@ export function SellToIndustries() {
     notifications.show({
       color: 'green', // Use a valid color value
       title: 'Request sent!',
-      message: 'You may receive a call from the industry dealer',
+      message: 'You will receive a call from the industry dealer',
     });
     open(); // 🆕 Open the success modal
+    setTimeout(() => {
+      navigate(-1);
+    }, 1500);
+  
   }
 
   return (

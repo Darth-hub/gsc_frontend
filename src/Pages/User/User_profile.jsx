@@ -6,6 +6,8 @@ import axios from "axios";
 import { useAuth } from "../../Context/AuthContext";
 import Header from "../../../Components/Header";
 import Footer from "../../../Components/Footer";
+import { Loader } from "@mantine/core";
+import coin from "../../../Components/images/coin.png";
 
 const User_profile = () => {
     const { user } = useAuth(); // Destructure user from context
@@ -66,6 +68,7 @@ const User_profile = () => {
                             <h3>Hi,</h3>
                             <h1>{user?.displayName || "User"}</h1>
                             <h2 className="text-sm">{user?.email || "No email found"}</h2>
+                            <div className="flex itms-center text-[0.95em]"> My coins : <img src={coin} className="w-[1em] aspect-square" alt="" /> <p className="text-[#FFBF00]">500</p> </div>
                         </div>
                     </div>
 
@@ -81,6 +84,8 @@ const User_profile = () => {
                             <Link smooth to="/terms&condition" className="hover:scale-110 hover:font-medium">TERMS AND CONDITIONS</Link>
                         </div>
 
+
+
                         {/* Logo fixed at the bottom */}
                         <div className="flex items-end scale-150 justify-center gap-4 mb-10">
                             <img src={eclyralogo} className="h-[3.5rem]" alt="Eclyra Logo" />
@@ -93,7 +98,7 @@ const User_profile = () => {
                 {/* Right Section - Pickups Data */}
                 <div className="bg-[#3D8D7A] flex overflow-y-scroll scrollbar-hide flex-col gap-2.5 p-8 items-center rounded-xl w-[68%] h-[90%]">
                     {loading ? (
-                        <p className="text-white">Loading...</p>
+                        <div className="scale-500 flex justify-center items-center w-[100%] h-[100%]"><Loader   color="green" /></div>
                     ) : error ? (
                         <p className="text-red-500">Error: {error}</p>
                     ) : (

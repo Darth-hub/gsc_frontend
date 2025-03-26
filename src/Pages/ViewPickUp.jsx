@@ -15,6 +15,7 @@ const url = import.meta.env.VITE_BACKEND_URL;
 const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
 
 const ViewPickUp = () => {
+  const [showPopup, setShowPopup] = useState(false);
   const [showFirst, setShowFirst] = useState(false);
   const [showSecond, setShowSecond] = useState(true);
   const [PickUpLocation, setPickUpLocation] = useState(null);
@@ -41,7 +42,7 @@ const ViewPickUp = () => {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0 });
   const [targetDate, setTargetDate] = useState(null)
 
-  // const navigate = useNavigate()
+  const navigate = useNavigate()
 
 
   useEffect(() => {    
@@ -263,11 +264,49 @@ const ViewPickUp = () => {
           DealerName: user.user.displayName,
           id: data.id,
         });
+
         notifications.show({
           color: 'green',
           title: 'Order Accepted',
-          message: 'Make sure to reach at the scheduled place on time',
-        });
+          message: 'Make sure to reach the scheduled place on time',
+          autoClose: 3000, // Adjust auto-close duration
+          withCloseButton: false, // Removes the close button
+          styles: {
+            root: {
+              position: 'fixed',
+              top: '10px',
+              right: '10px',
+              zIndex: 1000, // Ensure it's above other elements
+              width: '400px', // Square shape
+              height: '60px', // Square shape
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              borderRadius: '8px', // Slight rounding
+              color: 'white',
+              textAlign: 'center',
+              fontSize: '14px',
+              fontWeight: 'bold',
+              padding: '10px', // Add padding for better spacing
+            },
+            title: {
+              flexGrow: 1, // Makes the title take full height
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: '100%', // Ensures full width
+            },
+            message: {
+              fontsize: '20px', // Smaller font size
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: '100%',
+            },
+          },
+        });        
+        
       } catch (error) {
         console.error('Error accepting order:', error);
       }
@@ -360,9 +399,13 @@ const ViewPickUp = () => {
               </div>
               <div className="text-xl w-full justify-between flex gap-1">
                 <div></div>
-                <button onClick={AcceptOrder} className="hover:scale-[1.08] transition-all duration-200 bg-zinc-900 rounded-md mt-1 ml-3 p-[0.3vw]">
+                <button onClick={AcceptOrder} className="hover:scale-[1.08] cursor-pointer transition-all duration-200 bg-zinc-900 rounded-md mt-1 ml-3 p-[0.3vw]">
                   Accept
                 </button>
+                {showPopup && (
+        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-green-500 text-white px-6 py-3 rounded-md shadow-lg">
+          Order Accepted!
+        </div>)}
                 <div></div>
               </div>
             </div>
