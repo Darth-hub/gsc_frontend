@@ -4,7 +4,7 @@ import Header from './Header';
 import { HashLink as Link } from "react-router-hash-link";
 import { useAuth } from '../src/Context/AuthContext';
 import { Loader } from '@mantine/core';
-import { auth } from '../src/firebase/firebase.Config';
+import { auth } from '../src/firebase/firebase.config';
 import { signOut } from 'firebase/auth';
 import { connectFirestoreEmulator } from 'firebase/firestore';
 

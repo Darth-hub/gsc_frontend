@@ -19,7 +19,7 @@ import SellToIndustries from './Pages/SellToIndustries.jsx'
 import ViewIndustries from './Pages/ViewIndustries.jsx';
 import { View } from 'lucide-react';
 import CommunityChat from './Pages/CommunityChat.jsx'
-import Landing_Page from './Landing_Page.jsx';
+import Landing_Page from './Landing_Page';
 
 
 
