@@ -39,7 +39,7 @@ const ViewPickUp = () => {
   const [UpcommingPickUps, setUpcommingPickUps] = useState([]);
   const [loading, setLoading] = useState(false); // Loading state
 
-  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0 });
+  const [timeLeft, setTimeLeft] = useState({ days: 2, hours: 12, minutes: 57 });
   const [targetDate, setTargetDate] = useState(null)
 
   const navigate = useNavigate()
@@ -65,7 +65,7 @@ const ViewPickUp = () => {
       const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
 
-      setTimeLeft({ days, hours, minutes });
+      // setTimeLeft({ days, hours, minutes });
     }, 1000);
     console.log(timeLeft)
 
@@ -369,7 +369,7 @@ const ViewPickUp = () => {
       <div className="flex">
         {showFirst && (
           <div>
-            <div className="h-[600px]  mr-[20px] w-[50vw] rounded-md mt-1.5">
+            <div className="h-[600px] w-[60vw] mr-[20px] w-[50vw] rounded-md mt-1.5">
               <Map originLocation={currentLocation.current} destinationLocation={PickUpLocation} getDistance={getDistance} />
             </div>
             <div className="bg-green-700 h-[450px] mt-[1vw] mr-[20px] rounded-md flex flex-col">
@@ -386,7 +386,7 @@ const ViewPickUp = () => {
                 expected weight : {data.estimatedWeight}
               </div>
               <div className="text-xl gap-1 border p-[0.1vh] m-[0.1vh] ml-[0.5vw] mr-[0.5vw] pl-[0.5vw] pr-[0.5vw] overflow-x-auto scrollbar-hide rounded-md">
-                travel distance : {distance}
+                travel distance : {distance} km
               </div>
               <div className="text-xl gap-1 border p-[0.1vh] m-[0.1vh] ml-[0.5vw] mr-[0.5vw] pl-[0.5vw] pr-[0.5vw] overflow-x-auto scrollbar-hide rounded-md">
                 travel time : {time}
