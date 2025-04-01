@@ -1,24 +1,28 @@
-import React from 'react'
-import "./Component.css"
+import React, { useContext } from 'react';
+import "./Component.css";
+import { CampaignContext } from './Campaign_context';
 
 const Campaign_Cards = () => {
-  return ( 
-    <div class="campaignCard flex-col py-5 px-5 gap-5 w-[25%] h-[90%] text-white">
-        <div className='w-[90%]'>
-            <img src="https://img.freepik.com/free-photo/group-cleaning-workers-collecting-trash-outdoors_1262-21049.jpg?t=st=1739283222~exp=1739286822~hmac=51c4ce42b5733cb9ff7c7df9a8a1ab3b954f591082f0ad2eadb0b3e24ea3a741&w=996" className='rounded-[10px]' />
-        </div>
+  const { campaigns } = useContext(CampaignContext);
 
-        <div>
-            <h1 className='text-xl'>Waste to Worth</h1>
-        </div>
+  return (
+    <div className="flex flex-nowrap gap-5 justify-center">
+      {campaigns.map((campaign) => (
+        <div key={campaign.id} className="campaignCard flex-col py-5 px-5 gap-5 w-[22%]  h-[90%] text-white">
+          <div className='w-[90%]'>
+            <img src={campaign.img} alt={campaign.name} className='rounded-[10px] w-full' />
+          </div>
+          <div>
+            <h1 className='text-xl'>{campaign.name}</h1>
+          </div>
 
-        <div>
-            <p>"Recycle Today for a Greener Tomorrow!"
-
-E-waste is growing at an alarming rate. Every device you recycle helps reduce pollution and conserve valuable resources. Together, we can build a cleaner, greener future! 🌱💚 #RecycleForTomorrow #SustainableLiving"</p>
+          <div>
+            <p>{campaign.desc}</p>
+          </div>
         </div>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default Campaign_Cards
+export default Campaign_Cards;

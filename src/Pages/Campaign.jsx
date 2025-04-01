@@ -18,10 +18,7 @@ const Campaign = () => {
         <div className=' w-full flex gap-10 h-full pt-10 px-20'>
         
         <Campaign_Cards/>
-        <Campaign_Cards/>
-        <Campaign_Cards/>
-        <Campaign_Cards/>
-        <Campaign_Cards/>
+
        
         </div>
 

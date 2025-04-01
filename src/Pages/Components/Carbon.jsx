@@ -47,7 +47,7 @@ export default function CarbonFootprintMeter() {
                 </span>
               </h2>
               <p className="text-xl text-gray-600">
-                Carbon Reduction Target Achieved
+                Carbon Reduction Target To Achieve
               </p>
             </div>
           </div>
