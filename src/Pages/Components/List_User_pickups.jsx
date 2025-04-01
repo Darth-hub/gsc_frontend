@@ -69,7 +69,7 @@ const List_User_pickups = ({ LivePickUps, locationGetter }) => {
               onClick={openMap}
               datakey={item.id}
               ref={(el) => (rowRefs.current[index] = el)}
-              className="animate-row p-5 flex flex-col h-fit w-[10] rounded-xl border-b hover:bg-green-300"
+              className="animate-row p-5 flex flex-col h-fit w-[50] rounded-xl border-b hover:bg-green-300"
               style={{
                 transitionDelay: `${index * 0.15}s`
               }}
@@ -79,15 +79,15 @@ const List_User_pickups = ({ LivePickUps, locationGetter }) => {
                 <span datakey={item.id} className="text-xl font-medium">{item.sellerName}</span>
               </td>
               <td datakey={item.id} className="pl-[1vw] pr-[1vw] pt-[0.5vw] flex item-center gap-3 flex items-baseline">  
-                <img datakey={item.id} src="/images/map_icon.png" width="15" height="15"/>    
+                <img datakey={item.id} src="../../public/images/map_icon.png" width="15" height="15"/>    
                 <span datakey={item.id} className="text-sm font-medium">{item.pickUpLocation}</span>
               </td>
               <td datakey={item.id} className="pl-[1vw] pr-[1vw] pt-[0.5vw] flex item-center gap-3 flex items-baseline">  
-                <img datakey={item.id} src="/images/gmail.png" width="15" height="15"/>    
+                <img datakey={item.id} src="../../public/images/gmail.png" width="15" height="15"/>    
                 <span datakey={item.id} className="text-sm font-medium">{item.sellerEmail}</span>
               </td>
               <td datakey={item.id} className="pl-[1vw] pr-[1vw] pt-[0.5vw] flex item-center gap-3 flex items-baseline">
-                <img datakey={item.id} src="/images/garbage.png" width="15" height="15"/>    
+                <img datakey={item.id} src="../../public/images/garbage.png" width="15" height="15"/>    
                 <span datakey={item.id} className="text-sm font-medium">{item.estimatedWeight} kg (expected by user)</span>
               </td>
               <td datakey={item.id} className="pl-[1vw] pr-[1vw] pt-[0.5vw] flex justify-between">

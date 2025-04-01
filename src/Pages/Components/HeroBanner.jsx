@@ -138,7 +138,7 @@ export default function HeroBanner() {
         <div
           className="absolute inset-0 bg-cover bg-center z-0 opacity-90"
           style={{
-            backgroundImage: "url('/public/pedophil.jpg')",
+            backgroundImage: "url('../../../public/pedophil.jpg')",
           }}
         />
 

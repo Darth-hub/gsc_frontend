@@ -360,7 +360,7 @@ const ViewPickUp = () => {
           <img
             onClick={resetMap}
             src={Img}
-            loading="lazy"
+            loading="lazy"x
             width={35}
             className="shadow-[0px_3px_1.5px_0.5px_rgba(161,223,154,0.4)] hover:scale-[1.08] transition-all duration-200 bg-[#93ca12] rounded-[12px] mt-10 ml-5"
           />
