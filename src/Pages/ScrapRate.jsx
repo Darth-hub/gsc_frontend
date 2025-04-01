@@ -1,52 +1,52 @@
 import React from "react";
 import "../ScrapRate.css";
-import Footer from "../../Components/Footer";
-
+import Footer from "./Components/Footer";
+import Header from "./Components/Header";
 
 /* e-waste */
-import laptop from "../../Components/images/laptop.png";
-import mobile from "../../Components/images/mobile.png";
-import monitor from "../../Components/images/monitor.png";
-import charger from "../../Components/images/charger.png";
-import headphone from "../../Components/images/headphone.png";
-import speakers from "../../Components/images/speaker.png";
-import keyboard from "../../Components/images/keyboard.png";
-import camera from "../../Components/images/camera.png";
-import Dryer from "../../Components/images/dryer.png";
+import laptop from "/images/laptop.png";
+import mobile from "/images/mobile.png";
+import monitor from "/images/monitor.png";
+import charger from "/images/charger.png";
+import headphone from "/images/headphone.png";
+import speakers from "/images/speaker.png";
+import keyboard from "/images/keyboard.png";
+import camera from "/images/camera.png";
+import Dryer from "/images/dryer.png";
 
 /* Large Appliances */
-import splitac from "../../Components/images/splitac.png";
-import ac from "../../Components/images/ac.png";
-import washing from "../../Components/images/washing.png";
-import fridge from "../../Components/images/fridge.png";
-import geyser from "../../Components/images/geyser.png";
-import ironCooler from "../../Components/images/IronCooler.png";
-import plasticCooler from "../../Components/images/PlasticCooler.png";
-import dishwasher from "../../Components/images/Dishwasher.png";
-import VaccumCleaner from "../../Components/images/vaccum_cleaner.png";
+import splitac from "/images/splitac.png";
+import ac from "/images/ac.png";
+import washing from "/images/washing.png";
+import fridge from "/images/fridge.png";
+import geyser from "/images/geyser.png";
+import ironCooler from "/images/IronCooler.png";
+import plasticCooler from "/images/PlasticCooler.png";
+import dishwasher from "/images/dishwasher.png";
+import VaccumCleaner from "/images/vaccum_cleaner.png";
 
 /* Small Appliances */
-import microwave from "../../Components/images/microwave.png";
-import printer from "../../Components/images/printer.png";
-import ceilingFan from "../../Components/images/ceilingFan.png";
-import UPS from "../../Components/images/UPS.png";
-import metalWaste from "../../Components/images/metal.png";
-import TV from "../../Components/images/TV.png";
-import motor from "../../Components/images/motor.png";
-import toaster from "../../Components/images/toaster.png";
-import Grinder from "../../Components/images/grinder.png";
+import microwave from "/images/microwave.png";
+import printer from "/images/printer.png";
+import ceilingFan from "/images/ceilingfan.png";
+import UPS from "/images/UPS.png";
+import metalWaste from "/images/metal.png";
+import TV from "/images/TV.png";
+import motor from "/images/motor.png";
+import toaster from "/images/toaster.png";
+import Grinder from "/images/grinder.png";
 
 /* Daily Waste */
-import newspaper from "../../Components/images/newspaper.png";
-import cardboard from "../../Components/images/cardboard.png";
-import steelUtensils from "../../Components/images/steel.png";
-import books from "../../Components/images/book.png";
-import bottles from "../../Components/images/bottles.png";
-import clothes from "../../Components/images/clothes.png";
-import toys from "../../Components/images/toys.png";
-import bicycle from "../../Components/images/cycle.png";
-import Wires from "../../Components/images/wire.png";
-import Header from "../../Components/Header";
+import newspaper from "/images/newspaper.png";
+import cardboard from "/images/cardboard.png";
+import steelUtensils from "/images/steel.png";
+import books from "/images/book.png";
+import bottles from "/images/bottles.png";
+import clothes from "/images/clothes.png";
+import toys from "/images/toys.png";
+import bicycle from "/images/cycle.png";
+import Wires from "/images/wire.png";
+
 
 const scrapCategories = [
   {

@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from '../../../Components/Header'
+import Header from '../Components/Header'
 import "../../App.css"
-import Item_detail_card from '../../../Components/Item_detail_card'
+import Item_detail_card from '../Components/Item_detail_card'
 
 
 const View_pickups = () => {

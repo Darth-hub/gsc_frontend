@@ -1,5 +1,5 @@
 import React from 'react';
-import Work_Card from '../../Components/Work_Card';
+import Work_Card from './Components/Work_Card';
 
 
 

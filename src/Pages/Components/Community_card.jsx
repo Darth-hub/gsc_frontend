@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom"; // Use Link for navigation
-import { useCommunityData } from "../src/Pages/Communitydata"; // Import the context hook
+import { useCommunityData } from "../Communitydata"; // Import the context hook
 
 const Community_card = () => {
   const { communities } = useCommunityData(); // Fetch community data

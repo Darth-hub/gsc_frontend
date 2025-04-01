@@ -1,5 +1,5 @@
 import React from 'react'
-import Customer_Review_Card from '../../Components/Customer_Review_Card'
+import Customer_Review_Card from './Components/Customer_Review_Card'
 
 
 const Customer_Review = () => {

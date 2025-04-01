@@ -9,9 +9,9 @@ import {
   TextInput,
   Title,
   Badge,
-  Modal, // 🆕 Import Mantine Modal
+  Modal, // Import Mantine Modal
 } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks'; // 🆕 Import Mantine hook
+import { useDisclosure } from '@mantine/hooks'; // Import Mantine hook
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 import { useRef, useState, useContext } from 'react';
@@ -37,7 +37,7 @@ export function SellToIndustries() {
   const divRef4 = useRef(null);
   const image = Industrydata[id - 1].industry_image;
 
-  // 🆕 Mantine Modal Hook
+  // Mantine Modal Hook
   const [opened, { open, close }] = useDisclosure(false);
 
   console.log(Industrydata[id - 1]);
@@ -61,7 +61,7 @@ export function SellToIndustries() {
       title: 'Request sent!',
       message: 'You will receive a call from the industry dealer',
     });
-    open(); // 🆕 Open the success modal
+    open(); //Open the success modal
     setTimeout(() => {
       navigate(-1);
     }, 1500);
@@ -70,7 +70,7 @@ export function SellToIndustries() {
 
   return (
     <>
-      {/* 🆕 Mantine Modal */}
+      {/* Mantine Modal */}
       <Modal opened={opened} onClose={close} centered size="md">
         <div className="flex flex-col items-center">
           <h2 className="text-2xl font-bold text-green-700 mt-4">Great!</h2>

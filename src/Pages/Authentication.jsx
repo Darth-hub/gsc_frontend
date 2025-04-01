@@ -1,8 +1,8 @@
 import React from 'react'
-import AuthenticationForm from '../../Components/AuthenticationForm'
+import AuthenticationForm from './Components/AuthenticationForm'
 import { useNavigate, useParams } from 'react-router-dom'
-import Header from '../../Components/Header'
-import Footer from '../../Components/Footer'
+import Header from './Components/Header'
+import Footer from './Components/Footer'
 import { FaArrowLeft } from "react-icons/fa";
 
 

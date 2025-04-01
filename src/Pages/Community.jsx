@@ -1,8 +1,8 @@
 import React from 'react'
-import Community_card from '../../Components/Community_card'
+import Community_card from './Components/Community_card'
 import { HashLink as Link } from "react-router-hash-link";
-import Header from '../../Components/Header';
-import Footer from '../../Components/Footer';
+import Header from './Components/Header';
+import Footer from './Components/Footer';
 
 
 const Community = () => {

@@ -1,7 +1,7 @@
 import { Heart, ShoppingCart, Minus, Plus, Maximize2 } from "lucide-react"
 import { useState } from "react"
-import Header from "../../Components/Header"
-import Footer from "../../Components/Footer"
+import Header from "./Components/Header"
+import Footer from "./Components/Footer"
 
 
 export default function Store() {
@@ -13,53 +13,53 @@ export default function Store() {
       id: 1,
       title: "Eclyra T-Shirt",
       price: 500,
-      image: "../Components/images/tshirt.jpg",
+      image: "/images/tshirt.jpg",
       isNew: true,
     },
     {
       id: 2,
       title: "Eclyra Hoodie",
       price: 600,
-      image: "../Components/images/hoodie2.jpg",
+      image: "/images/hoodie2.jpg",
       isSale: true,
     },
     {
       id: 3,
       title: "Eclyra Towel",
       price: 700,
-      image: "../Components/images/towel.png",
+      image: "/images/towel.png",
     },
     {
       id: 4,
       title: "Eclyra Notebook",
       price: 200,
-      image: "../Components/images/notebookStore.png",
+      image: "/images/notebookStore.png",
     },
     {
       id: 5,
       title: "Eclyra BackPack",
       price: 1000,
-      image: "../Components/images/backpackmain.png",
+      image: "/images/backpackmain.png",
       isNew: true,
     },
     {
       id: 6,
       title: "Eclyra Laptop Sleeve",
       price: 1500,
-      image: "../Components/images/laptopSleeve.png",
+      image: "/images/laptopSleeve.png",
       isSale: true,
     },
     {
       id: 7,
       title: "Eclyra ToteBag",
       price: 700,
-      image: "../Components/images/ToteBag.png",
+      image: "/images/ToteBag.png",
     },
     {
       id: 8,
       title: "Eclyra Sipper",
       price: 500,
-      image: "../Components/images/sipper.png",
+      image: "/images/sipper.png",
     },
   ]
 

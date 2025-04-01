@@ -5,7 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import { useCommunityData } from "../Communitydata"; // Import context hook
 import { useParams } from "react-router-dom"; // Get dynamic community ID
 import { CiLocationOn } from "react-icons/ci";
-import coin from "../../../Components/images/coin.png";
+import coin from "/images/coin.png";
 
 const Join_community = () => {
   const { communities } = useCommunityData(); // Get community data

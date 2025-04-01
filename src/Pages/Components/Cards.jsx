@@ -4,9 +4,9 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "../src/App.css";
+import "../../App.css";
 import { Link } from "react-router-dom";
-import { BlogContext } from "../src/Pages/User/Blogdata";
+import { BlogContext } from "../User/Blogdata";
 
 
 const Cards = () => {

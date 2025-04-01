@@ -1,7 +1,7 @@
 import { Search } from "lucide-react";
 import React, { useContext, useState } from "react";
-import Footer from "../../Components/Footer";
-import Header from "../../Components/Header";
+import Footer from "./Components/Footer";
+import Header from "./Components/Header";
 import { HashLink as Link } from "react-router-hash-link";
 import { BlogContext } from "./User/Blogdata";
 

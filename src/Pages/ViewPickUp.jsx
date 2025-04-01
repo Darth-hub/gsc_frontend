@@ -1,13 +1,14 @@
 import React, { useEffect, useRef, useState, useCallback, useMemo } from 'react';
 import { IconFilter } from '@tabler/icons-react';
-import List_User_pickups from '../../Components/List_User_pickups.jsx';
-import Map from '../../Components/Map.jsx';
+import List_User_pickups from './Components/List_User_pickups.jsx';
+import Map from './Components/Map.jsx';
 import { Loader, TextInput, Drawer, Button, SegmentedControl, NumberInput, Group, Box } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import ScrapFilterForm from '../../Components/Filter.jsx';
+import ScrapFilterForm from './Components/Filter.jsx';
 import axios from 'axios';
 import { useAuth } from '../Context/AuthContext.jsx';
 import { notifications } from '@mantine/notifications';
+import Img from "../../public/images/right-arrow.png"
 import { useNavigate } from 'react-router-dom'
 import { useForm } from '@mantine/form';
 
@@ -358,7 +359,7 @@ const ViewPickUp = () => {
         {showFirst && (
           <img
             onClick={resetMap}
-            src="../../Components/images/right-arrow.png"
+            src={Img}
             loading="lazy"
             width={35}
             className="shadow-[0px_3px_1.5px_0.5px_rgba(161,223,154,0.4)] hover:scale-[1.08] transition-all duration-200 bg-[#93ca12] rounded-[12px] mt-10 ml-5"

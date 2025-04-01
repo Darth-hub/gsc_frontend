@@ -1,14 +1,14 @@
 import { IconPencil, IconTrash } from '@tabler/icons-react';
-import IndustryCard from '../../Components/IndustryCard.jsx'
-import MultiMap from '../../Components/MultiMap.jsx';
+import IndustryCard from './Components/IndustryCard.jsx'
+import MultiMap from './Components/MultiMap.jsx';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useEffect, useState, useContext} from 'react';
 import { Title } from '@mantine/core';
 import { DataContext } from '../Context/DataContext.jsx';
-import HeroBanner from '../../Components/HeroBanner.jsx';
-import CarbonFootprintMeter from '../../Components/Carbon.jsx';
+import HeroBanner from './Components/HeroBanner.jsx';
+import CarbonFootprintMeter from './Components/Carbon.jsx';
 
 
 const ViewIndustries = () => {

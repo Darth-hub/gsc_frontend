@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import profile from "../../../Components/images/profilepic.png";
+import profile from "/images/profilepic.png";
 import { HashLink as Link } from "react-router-hash-link";
-import eclyralogo from "../../../Components/images/eclyralogo.png";
+import eclyralogo from "/images/eclyralogo.png";
 import axios from "axios";
 import { useAuth } from "../../Context/AuthContext";
-import Header from "../../../Components/Header";
-import Footer from "../../../Components/Footer";
+import Header from "../Components/Header";
+import Footer from "../Components/Footer";
 import { Loader } from "@mantine/core";
-import coin from "../../../Components/images/coin.png";
+import coin from "/images/coin.png";
 
 const User_profile = () => {
     const { user } = useAuth(); // Destructure user from context
@@ -19,16 +19,13 @@ const User_profile = () => {
     const [error, setError] = useState(null); // Error handling
     const [sellerEmail, setSellerEmail] = useState("");
 
-
-
-    // ✅ Set sellerEmail when user data is available
     useEffect(() => {
         if (user?.email) {
             setSellerEmail(user.email);
         }
     }, [user]); // Runs when user data changes
 
-    // ✅ Fetch seller pickups when sellerEmail is set
+    // Fetch seller pickups when sellerEmail is set
     useEffect(() => {
         const fetchPickups = async () => {
             if (!sellerEmail) return; // Don't fetch if email is empty

@@ -1,8 +1,8 @@
 import React from 'react'
-import logo from '../../../Components/images/BIG_LOGO.png'
+import logo from '/images/BIG_LOGO.png'
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-import Header from '../../../Components/Header';
+import Header from '../Components/Header';
 
 const Buy_scarp = () => {
   return (

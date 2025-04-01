@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
-import PickUpForm from '../../Components/PickUpForm'
+import PickUpForm from './Components/PickUpForm'
 import { Text } from '@mantine/core'
 import { useAuth } from '../Context/AuthContext'
 import LoginToContinue from './LoginToContinue'
-import Header from '../../Components/Header'
-import Footer from '../../Components/Footer'
+import Img from "../../public/images/pageImg.png"
+import Header from './Components/Header'
+import Footer from './Components/Footer'
 
 const SchedulePickUp = () => {
   const user = useAuth()
@@ -27,7 +28,7 @@ const SchedulePickUp = () => {
                   Easy Pickups, Zero Hassle!
               </div>
           </h1>
-              <img src='../../Components/images/pageImg.png' className='ml-[8vw] mt-[5vh] h-[50vh]'/>
+              <img src={Img} className='ml-[8vw] mt-[5vh] h-[50vh]'/>
           </div>        
   
           <div className='mt-[10vh]'>

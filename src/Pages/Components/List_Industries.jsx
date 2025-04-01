@@ -150,15 +150,15 @@ const List_Industies = () => {
                 <span datakey={item.id} className="text-xl font-medium">{item.name}</span>
               </td>
               <td datakey={item.id} className="p-3 flex item-center gap-3 flex items-baseline">  
-                <img datakey={item.id} src="../Components/images/map_icon.png" width="15" height="15"/>    
+                <img datakey={item.id} src="/images/map_icon.png" width="15" height="15"/>    
                 <span datakey={item.id} className="text-sm font-medium">{item.location}</span>
               </td>
               <td datakey={item.id} className="p-3 flex item-center gap-3 flex items-baseline">  
-                <img datakey={item.id} src="../Components/images/telephone.png" width="15" height="15"/>    
+                <img datakey={item.id} src="/images/telephone.png" width="15" height="15"/>    
                 <span datakey={item.id} className="text-sm font-medium">{item.phone}</span>
               </td>
               <td datakey={item.id} className="p-3 flex item-center gap-3 flex items-baseline">
-              <img datakey={item.id} src="../Components/images/garbage.png" width="15" height="15"/>    
+              <img datakey={item.id} src="/images/garbage.png" width="15" height="15"/>    
               <span datakey={item.id} className="text-sm font-medium">{item.estimated_Weight} kg (expected by user)</span>
               </td>
               <td datakey={item.id} className="p-3 flex justify-between">

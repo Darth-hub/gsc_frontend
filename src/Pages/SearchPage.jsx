@@ -2,9 +2,9 @@
 
 import { useState } from "react"
 import { Search } from "lucide-react"
-import AnimatedSearchBar from "../../Components/AnimatedSearch"
-import EnvironmentalStats from "../../Components/EnvironmentStats"
-import AnswerBox from "../../Components/AnswerBox"
+import AnimatedSearchBar from "./Components/AnimatedSearch"
+import EnvironmentalStats from "./Components/EnvironmentStats"
+import AnswerBox from "./Components/AnswerBox"
 
 export default function Home() {
   const [query, setQuery] = useState("")

@@ -1,8 +1,8 @@
 import React from 'react'
-import eclyralogo from './images/eclyralogo.png'
+import eclyralogo from '/images/eclyralogo.png'
 import 'remixicon/fonts/remixicon.css'
 import { HashLink as Link } from "react-router-hash-link";
-import { useAuth } from '../src/Context/AuthContext';
+import { useAuth } from '../../Context/AuthContext';
 
 
 const Header = () => {

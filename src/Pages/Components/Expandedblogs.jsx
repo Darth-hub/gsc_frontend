@@ -1,5 +1,5 @@
 import React from 'react'
-import cancel from '../Components/images/cancel.png'
+import cancel from '/images/cancel.png'
 import { useLocation, useNavigate } from "react-router-dom";
 
 const Expandedblogs = () => {

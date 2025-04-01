@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { WorkContext } from "../src/Pages/WorkContext";
+import { WorkContext } from "../WorkContext.jsx";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";

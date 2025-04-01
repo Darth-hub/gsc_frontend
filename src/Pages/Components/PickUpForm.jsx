@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useRef, useState } from 'react';
 import { Autocomplete, Loader, TextInput, Anchor, Box, Button, Text, Title } from '@mantine/core';
 import { useForm } from "@mantine/form";
-import { useAuth } from '../src/Context/AuthContext'
+import { useAuth } from "../../Context/AuthContext";
 import { notifications } from "@mantine/notifications";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';

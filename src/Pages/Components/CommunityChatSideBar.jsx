@@ -41,7 +41,7 @@ export function Sidebar({ currentChannel, onChannelChange }) {
       <div className="p-4 border-b border-green-800/30 flex items-center gap-3">
         <div className="h-9 w-8 rounded-full  flex items-center justify-center">
         <img 
-              src="../../Components/images/eclyralogo.png" 
+              src="/images/eclyralogo.png" 
               alt="Eclyra Logo" 
               className="h-full w-full object-cover"
             />
@@ -98,7 +98,7 @@ export function Sidebar({ currentChannel, onChannelChange }) {
       <div className="p-3 border-t border-green-800/30 bg-black/20 backdrop-blur-sm flex items-center gap-3">
         <div className="relative h-8 w-8 rounded-full bg-green-600 flex-shrink-0 overflow-hidden">
           <img 
-            src="../../Components/images/woman.png" 
+            src="/images/woman.png" 
             alt="User Avatar" 
             className="h-full w-full object-cover"
           />

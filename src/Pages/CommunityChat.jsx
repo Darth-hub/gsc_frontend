@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { MessageList } from "../../Components/MessageListCommunityChat";
-import { Sidebar } from "../../Components/CommunityChatSideBar";
-import { MembersList } from "../../Components/MembersListCommunity";
-import { MessageInput } from "../../Components/MessageInputCommunity";
-import { ChatHeader } from "../../Components/CommunityChatHeader";
+import { MessageList } from "./Components/MessageListCommunityChat";
+import { Sidebar } from "./Components/CommunityChatSideBar";
+import { MembersList } from "./Components/MembersListCommunity";
+import { MessageInput } from "./Components/MessageInputCommunity";
+import { ChatHeader } from "./Components/CommunityChatHeader";
 
 export default function ChatPage() {
   const [currentChannel, setCurrentChannel] = useState("General");
@@ -14,7 +14,7 @@ export default function ChatPage() {
       id: "1",
       user: {
         name: "Ayush Ranjan",
-        avatar: "../../Components/images/profilepic.png",
+        avatar: "/images/profilepic.png",
       },
       content: "Hey everyone! We're organizing a community cleaning drive this Sunday at Central Park. Volunteers will get eco-reward points! Who's in?",
       timestamp: "10:15 AM",
@@ -28,8 +28,8 @@ export default function ChatPage() {
     {
       id: "2",
       user: {
-        name: "Tanisha Rattan",
-        avatar: "../../Components/images/woman.png",
+        name: "Rohit Khallar",
+        avatar: "/images/profilepic.png",
       },
       content: "That sounds amazing! I'm definitely joining. Also, can we set up an e-waste collection booth alongside the cleanup?",
       timestamp: "10:18 AM",
@@ -47,7 +47,7 @@ export default function ChatPage() {
       id: Date.now().toString(),
       user: {
         name: "You",
-        avatar: "../../Components/images/woman.png",
+        avatar: "/images/woman.png",
       },
       content,
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),

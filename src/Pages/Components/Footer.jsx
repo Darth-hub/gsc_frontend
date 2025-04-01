@@ -1,11 +1,11 @@
 import React from 'react'
-import Logo  from "../Components/images/eclyralogo.png"
-import fb from "../Components/images/facebook.png"
-import insta from "../Components/images/instagram.png"
-import twitter from "../Components/images/twitter.png"
+import Logo  from "/images/eclyralogo.png"
+import fb from "/images/facebook.png"
+import insta from "/images/instagram.png"
+import twitter from "/images/twitter.png"
 import Subscribe from './Subscribe'
 import { HashLink as Link } from "react-router-hash-link";
-import Gmail from '../Components/images/gmail.png';
+import Gmail from '/images/gmail.png';
 import './Component.css';
 
 

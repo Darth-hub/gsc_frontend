@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrapRate from './Pages/ScrapRate';
-import Footer from '../Components/Footer';
+import Footer from './Pages/Components/Footer';
 import StorePage from './Pages/StorePage';
 import ContactUs from './Pages/ContactUs';
 import TermsCondition from './Pages/TermsCondition.jsx'; 
@@ -10,7 +10,7 @@ import Community from './Pages/Community.jsx';
 import Join_community from './Pages/User/Join_community.jsx';
 import User_dashboard from './Pages/User/User_dashboard.jsx';
 import BlogPage from './Pages/BlogsPage.jsx';
-import Expandedblogs from '../Components/Expandedblogs.jsx';
+import Expandedblogs from './Pages/Components/Expandedblogs.jsx';
 import Authentication from  '../src/Pages/Authentication.jsx'
 import SchedulePickUp from './Pages/SchedulePickUp.jsx'
 import User_profile from './Pages/User/User_profile.jsx';
@@ -19,7 +19,7 @@ import SellToIndustries from './Pages/SellToIndustries.jsx'
 import ViewIndustries from './Pages/ViewIndustries.jsx';
 import { View } from 'lucide-react';
 import CommunityChat from './Pages/CommunityChat.jsx'
-import Landing_Page from './Landing_Page.jsx';
+import Landing_Page from './Landing_Page';
 
 
 

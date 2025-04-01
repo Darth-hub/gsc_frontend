@@ -1,5 +1,5 @@
 import React from 'react'
-import Cards from '../../Components/Cards'
+import Cards from './Components/Cards'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

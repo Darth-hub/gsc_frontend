@@ -3,10 +3,10 @@ import { ChevronDown, Plus, Award, Leaf, TrendingUp } from "lucide-react"
 
 export function MembersList() {
   const members = [
-    { id: "1", name: "Ayush Ranjan", avatar: "../../Components/images/profilepic.png", online: true, role: "Moderator" },
-    { id: "2", name: "Rohit Khallar", avatar: "../../Components/images/profilepic.png", online: true, points: 420 },
-    { id: "3", name: "Ayush Kumar", avatar: "../../Components/images/profilepic.png", online: true },
-    { id: "4", name: "Tanisha Rattan", avatar: "../../Components/images/woman.png", online: true, role: "Owner" },
+    { id: "1", name: "Ayush Ranjan", avatar: "/images/profilepic.png", online: true, role: "Moderator" },
+    { id: "2", name: "Rohit Khallar", avatar: "/images/profilepic.png", online: true, points: 420 },
+    { id: "3", name: "Ayush Kumar", avatar: "/images/profilepic.png", online: true },
+    { id: "4", name: "Tanisha Rattan", avatar: "/images/woman.png", online: true, role: "Owner" },
   ]
 
   return (
@@ -16,7 +16,7 @@ export function MembersList() {
         <div className="flex justify-center mb-3">
           <div className="h-20 w-15 rounded-full  flex items-center justify-center">
           <img 
-              src="../../Components/images/eclyralogo.png" 
+              src="/images/eclyralogo.png" 
               alt="Eclyra Logo" 
               className="h-full w-full object-cover"
             />

@@ -1,5 +1,5 @@
 import React from 'react'
-import delivery from "../Components/images/delivery-box.png"
+import delivery from "./images/delivery-box.png"
 
 const active_pickup_card = () => {
   return (

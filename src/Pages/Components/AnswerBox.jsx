@@ -1,7 +1,7 @@
 "use client"
 import { Bot } from "lucide-react"
 import { useState, useEffect } from "react"
-import { generateResponse } from "../lib/gemini"
+import { generateResponse } from "../../../lib/gemini"
 import ReactMarkdown from 'react-markdown'
 
 export default function AnswerBox({ query }) {

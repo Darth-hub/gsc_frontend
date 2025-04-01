@@ -1,14 +1,14 @@
 import { createContext, useContext, useState } from "react";
-import community1 from "../../Components/images/community1.jpg";
-import community2 from "../../Components/images/community2.jpg";
-import community3 from "../../Components/images/community3.jpg";
-import community4 from "../../Components/images/community4.jpg";
-import community5 from "../../Components/images/community5.jpg";
-import community6 from "../../Components/images/community6.jpg";
-import community7 from "../../Components/images/community7.jpg";
-import community8 from "../../Components/images/community8.jpg";
-import community9 from "../../Components/images/community9.jpg";
-import community10 from "../../Components/images/community10.jpg";
+import community1 from "/images/community1.jpg";
+import community2 from "/images/community2.jpg";
+import community3 from "/images/community3.jpg";
+import community4 from "/images/community4.jpg";
+import community5 from "/images/community5.jpg";
+import community6 from "/images/community6.jpg";
+import community7 from "/images/community7.jpg";
+import community8 from "/images/community8.jpg";
+import community9 from "/images/community9.jpg";
+import community10 from "/images/community10.jpg";
 
 const CommunityDataContext = createContext();
 
