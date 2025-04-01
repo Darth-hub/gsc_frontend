@@ -79,15 +79,15 @@ const List_User_pickups = ({ LivePickUps, locationGetter }) => {
                 <span datakey={item.id} className="text-xl font-medium">{item.sellerName}</span>
               </td>
               <td datakey={item.id} className="pl-[1vw] pr-[1vw] pt-[0.5vw] flex item-center gap-3 flex items-baseline">  
-                <img datakey={item.id} src="../../public/images/map_icon.png" width="15" height="15"/>    
+                <img datakey={item.id} src="https://res.cloudinary.com/dkgclbg58/image/upload/v1743510765/map_icon_vxyie2.png" width="15" height="15"/>    
                 <span datakey={item.id} className="text-sm font-medium">{item.pickUpLocation}</span>
               </td>
               <td datakey={item.id} className="pl-[1vw] pr-[1vw] pt-[0.5vw] flex item-center gap-3 flex items-baseline">  
-                <img datakey={item.id} src="../../public/images/gmail.png" width="15" height="15"/>    
+                <img datakey={item.id} src="https://res.cloudinary.com/dkgclbg58/image/upload/v1743510764/gmail_tlbzsq.png" width="15" height="15"/>    
                 <span datakey={item.id} className="text-sm font-medium">{item.sellerEmail}</span>
               </td>
               <td datakey={item.id} className="pl-[1vw] pr-[1vw] pt-[0.5vw] flex item-center gap-3 flex items-baseline">
-                <img datakey={item.id} src="../../public/images/garbage.png" width="15" height="15"/>    
+                <img datakey={item.id} src="https://res.cloudinary.com/dkgclbg58/image/upload/v1743510765/garbage_clfuld.png" width="15" height="15"/>    
                 <span datakey={item.id} className="text-sm font-medium">{item.estimatedWeight} kg (expected by user)</span>
               </td>
               <td datakey={item.id} className="pl-[1vw] pr-[1vw] pt-[0.5vw] flex justify-between">

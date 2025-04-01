@@ -138,9 +138,11 @@ export default function HeroBanner() {
         <div
           className="absolute inset-0 bg-cover bg-center z-0 opacity-90"
           style={{
-            backgroundImage: "url('../../../public/pedophil.png')",
+            backgroundImage: `url("https://res.cloudinary.com/dkgclbg58/image/upload/v1743510775/pedophil_ipeswg.jpg")`
           }}
         />
+
+        {/* <img src="https://res.cloudinary.com/dkgclbg58/image/upload/v1743510775/pedophil_ipeswg.jpg" alt="" />÷ */}
 
         {/* Content */}
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
