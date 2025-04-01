@@ -1,7 +1,7 @@
 import { IconPencil, IconTrash } from '@tabler/icons-react';
 import { useEffect, useRef } from 'react';
 
-const List_User_pickups = ({ LivePickUps, locationGetter }) => {
+const ListUserPickups = ({ LivePickUps, locationGetter }) => {
   const data = LivePickUps;
   const rowRefs = useRef([]);
   const observerRef = useRef(null);
@@ -104,4 +104,4 @@ const List_User_pickups = ({ LivePickUps, locationGetter }) => {
   );
 }
 
-export default List_User_pickups;
+export default ListUserPickups;

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState, useCallback, useMemo } from 'react';
 import { IconFilter } from '@tabler/icons-react';
-import List_User_pickups from './Components/List_User_pickups.jsx';
+import ListUserPickups from './Components/ListUserpickups.jsx';
 import Map from './Components/Map.jsx';
 import { Loader, TextInput, Drawer, Button, SegmentedControl, NumberInput, Group, Box } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
@@ -429,7 +429,7 @@ const ViewPickUp = () => {
                   <Loader size={50}/>
                 </div>
               ) : (
-                LivePickUps.length > 0 && <List_User_pickups LivePickUps={LivePickUps} locationGetter={locationGetter} />
+                LivePickUps.length > 0 && <ListUserPickups LivePickUps={LivePickUps} locationGetter={locationGetter} />
               )}
             </div>
           </div>
@@ -486,7 +486,7 @@ const ViewPickUp = () => {
                   <Loader size={50}/>
                 </div>
                 ) : (
-                  LivePickUps.length > 0 && <List_User_pickups LivePickUps={UpcommingPickUps} locationGetter={locationGetter} />
+                  LivePickUps.length > 0 && <ListUserPickups LivePickUps={UpcommingPickUps} locationGetter={locationGetter} />
                 )}
               </div>
             </div>
