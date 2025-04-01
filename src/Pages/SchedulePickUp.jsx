@@ -3,9 +3,11 @@ import PickUpForm from './Components/PickUpForm'
 import { Text } from '@mantine/core'
 import { useAuth } from '../Context/AuthContext'
 import LoginToContinue from './LoginToContinue'
-import Img from "../../public/images/pageImg.png"
+// import Img from "../../public/images/pageImg.png"
 import Header from './Components/Header'
 import Footer from './Components/Footer'
+
+const Img = "https://res.cloudinary.com/dkgclbg58/image/upload/v1743522462/PageImg_mwd4xy.png";
 
 const SchedulePickUp = () => {
   const user = useAuth()
