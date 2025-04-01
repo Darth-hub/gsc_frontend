@@ -61,8 +61,7 @@ const ListUserPickups = ({ LivePickUps, locationGetter }) => {
         }
       `}</style>
       
-      <table className="w-full">
-        <tbody>
+      <div className="w-full">
           {data.map((item, index) => (
             // <tr
             //   key={item.id}
@@ -137,8 +136,7 @@ const ListUserPickups = ({ LivePickUps, locationGetter }) => {
               </div>
             </div>
           ))}
-        </tbody>
-      </table>
+      </div>
     </div>
   );
 }
