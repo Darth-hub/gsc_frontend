@@ -19,7 +19,7 @@ import SellToIndustries from './Pages/SellToIndustries.jsx'
 import ViewIndustries from './Pages/ViewIndustries.jsx';
 import { View } from 'lucide-react';
 import CommunityChat from './Pages/CommunityChat.jsx'
-import Landing_Page from './LandingPage.jsx';
+import LandingPage from './LandingPage.jsx';
 
 
 
@@ -29,7 +29,7 @@ function App() {
   return (
     <>    
     <Routes>
-      <Route path='/' element={<Landing_Page />} />
+      <Route path='/' element={<LandingPage />} />
     </Routes>
     
 
